@@ -21,7 +21,6 @@ switch-selected
 switch-active-selected
 switch-insensitive-selected
 switch-active-insensitive-selected
-backimage
 checkbox-unchecked-dark
 checkbox-unchecked-insensitive-dark
 radio-unchecked-dark
@@ -29,4 +28,4 @@ radio-unchecked-insensitive-dark
 checkbox-selectionmode-dark
 switch-dark
 switch-insensitive-dark
-backimage-dark
+
