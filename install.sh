@@ -168,7 +168,7 @@ install() {
   # GNOME SHELL
   mkdir -p                                                                           ${THEME_DIR}/gnome-shell
   cp -r ${SRC_DIR}/src/gnome-shell/common-assets                                     ${THEME_DIR}/gnome-shell/assets
-  cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/{background.jpg,calendar-today.svg} ${THEME_DIR}/gnome-shell/assets
+  # cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/{background.jpg,calendar-today.svg} ${THEME_DIR}/gnome-shell/assets
   cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/assets${ELSE_DARK}/*.svg           ${THEME_DIR}/gnome-shell/assets
 
   if [[ -f ${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg ]] ; then
