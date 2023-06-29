@@ -165,6 +165,45 @@ install() {
 
   cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-4.0/thumbnail.png
 
+  # GNOME SHELL
+  mkdir -p                                                                           ${THEME_DIR}/gnome-shell
+  cp -r ${SRC_DIR}/src/gnome-shell/common-assets                                     ${THEME_DIR}/gnome-shell/assets
+  # cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/{background.jpg,calendar-today.svg} ${THEME_DIR}/gnome-shell/assets
+  cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/assets${ELSE_DARK}/*.svg           ${THEME_DIR}/gnome-shell/assets
+
+  if [[ -f ${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg ]] ; then
+    cp -r ${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg                          ${THEME_DIR}/gnome-shell/assets/activities.svg
+  else
+    echo "${icon} icon not supported, Qogir icon will install..."
+    cp -r ${SRC_DIR}/src/gnome-shell/logos/logo-qogir.svg                            ${THEME_DIR}/gnome-shell/assets/activities.svg
+  fi
+
+  cp -r ${SRC_DIR}/src/gnome-shell/icons                                             ${THEME_DIR}/gnome-shell
+  cp -r ${SRC_DIR}/src/gnome-shell/pad-osd.css                                       ${THEME_DIR}/gnome-shell
+
+
+  if [[ "$tweaks" == 'true' ]]; then
+    sassc $SASSC_OPT ${SRC_DIR}/src/gnome-shell/theme-${GS_VERSION}/gnome-shell${ELSE_DARK}.scss ${THEME_DIR}/gnome-shell/gnome-shell.css
+  else
+    cp -r ${SRC_DIR}/src/gnome-shell/theme-${GS_VERSION}/gnome-shell${ELSE_DARK}.css ${THEME_DIR}/gnome-shell/gnome-shell.css
+  fi
+
+  cd ${THEME_DIR}/gnome-shell
+  ln -sf assets/no-events.svg no-events.svg
+  ln -sf assets/process-working.svg process-working.svg
+  ln -sf assets/no-notifications.svg no-notifications.svg
+
+  # CINNAMON
+  mkdir -p                                                                           ${THEME_DIR}/cinnamon
+  cp -r ${SRC_DIR}/src/cinnamon/assets${theme}/common-assets                         ${THEME_DIR}/cinnamon
+  cp -r ${SRC_DIR}/src/cinnamon/assets${theme}/assets${ELSE_DARK}                    ${THEME_DIR}/cinnamon/assets
+  if [[ "$tweaks" == 'true' ]]; then
+    sassc $SASSC_OPT ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.scss               ${THEME_DIR}/cinnamon/cinnamon.css
+  else
+    cp -r ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.css                           ${THEME_DIR}/cinnamon/cinnamon.css
+  fi
+
+  cp -r ${SRC_DIR}/src/cinnamon/thumbnail${theme}${ELSE_DARK}.png                    ${THEME_DIR}/cinnamon/thumbnail.png
 
   # METACITY
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
@@ -232,9 +271,281 @@ uninstall() {
   [[ -d "$THEME_DIR" ]] && rm -rf "$THEME_DIR" && echo -e "Uninstalling "$THEME_DIR" ..."
 }
 
+# GDM Theme
 
+check_exist() {
+  [[ -f "${1}" || -f "${1}.bak" ]]
+}
 
+restore_file() {
+  if [[ -f "${1}.bak" || -d "${1}.bak" ]]; then
+    rm -rf "${1}"; mv "${1}"{".bak",""}
+  fi
+}
 
+backup_file() {
+  if [[ -f "${1}" || -d "${1}" ]]; then
+    mv -n "${1}"{"",".bak"}
+  fi
+}
+
+install_gdm_deps() {
+  if ! has_command glib-compile-resources; then
+    echo -e "\n'glib2.0' are required for theme installation."
+
+    if has_command zypper; then
+      sudo zypper in -y glib2-devel
+    elif has_command swupd; then
+      sudo swupd bundle-add libglib
+    elif has_command apt; then
+      sudo apt install libglib2.0-dev-bin
+    elif has_command dnf; then
+      sudo dnf install -y glib2-devel
+    elif has_command yum; then
+      sudo yum install -y glib2-devel
+    elif has_command pacman; then
+      sudo pacman -Syyu --noconfirm --needed glib2
+    elif has_command xbps-install; then
+      sudo xbps-install -Sy glib-devel
+    elif has_command eopkg; then
+      sudo eopkg -y install glib2
+    else
+      echo -e "\nWARNING: We're sorry, your distro isn't officially supported yet.\n"
+    fi
+  fi
+}
+
+GS_THEME_DIR="/usr/share/gnome-shell/theme"
+COMMON_CSS_FILE="/usr/share/gnome-shell/theme/gnome-shell.css"
+UBUNTU_CSS_FILE="/usr/share/gnome-shell/theme/ubuntu.css"
+ZORIN_CSS_FILE="/usr/share/gnome-shell/theme/zorin.css"
+ETC_CSS_FILE="/etc/alternatives/gdm3.css"
+ETC_GR_FILE="/etc/alternatives/gdm3-theme.gresource"
+YARU_GR_FILE="/usr/share/gnome-shell/theme/Yaru/gnome-shell-theme.gresource"
+POP_OS_GR_FILE="/usr/share/gnome-shell/theme/Pop/gnome-shell-theme.gresource"
+ZORIN_GR_FILE="/usr/share/gnome-shell/theme/ZorinBlue-Light/gnome-shell-theme.gresource"
+MISC_GR_FILE="/usr/share/gnome-shell/gnome-shell-theme.gresource"
+GS_GR_XML_FILE="${SRC_DIR}/src/gnome-shell/gnome-shell-theme.gresource.xml"
+
+install_gdm() {
+  local name="${1}"
+  local theme="${2}"
+  local gcolor="${3}"
+  local icon="${4}"
+  local TARGET=
+
+  [[ "${gcolor}" == '-Light' ]] && local ELSE_LIGHT="${gcolor}"
+  [[ "${gcolor}" == '-Dark' ]] && local ELSE_DARK="${gcolor}"
+
+  local THEME_TEMP="/tmp/${1}${2}${3}"
+
+  theme_tweaks && install_gdm_deps && install_theme_color
+
+  echo -e "\nInstall ${1}${2}${3} GDM Theme..."
+
+  rm -rf "${THEME_TEMP}"
+  mkdir -p                                                                                  "${THEME_TEMP}/gnome-shell"
+  cp -r "${SRC_DIR}/src/gnome-shell/common-assets"                                          "${THEME_TEMP}/gnome-shell/assets"
+  cp -r "${SRC_DIR}/src/gnome-shell/assets${theme}/"{background.jpg,calendar-today.svg}     "${THEME_TEMP}/gnome-shell/assets"
+  cp -r "${SRC_DIR}/src/gnome-shell/assets${theme}/assets${ELSE_DARK}/"*.svg                "${THEME_TEMP}/gnome-shell/assets"
+  mv "${THEME_TEMP}/gnome-shell/assets/"{process-working.svg,no-events.svg,no-notifications.svg} "${THEME_TEMP}/gnome-shell"
+
+  if [[ -f "${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg" ]] ; then
+    cp -r "${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg"                               "${THEME_TEMP}/gnome-shell/assets/activities.svg"
+  else
+    echo "${icon} icon not supported, Qogir icon will install..."
+    cp -r "${SRC_DIR}/src/gnome-shell/logos/logo-qogir.svg"                                 "${THEME_TEMP}/gnome-shell/assets/activities.svg"
+  fi
+
+  cp -r "${SRC_DIR}/src/gnome-shell/icons"                                                  "${THEME_TEMP}/gnome-shell"
+  cp -r "${SRC_DIR}/src/gnome-shell/pad-osd.css"                                            "${THEME_TEMP}/gnome-shell"
+
+  if [[ "$tweaks" == 'true' ]]; then
+    sassc $SASSC_OPT "${SRC_DIR}/src/gnome-shell/theme-${GS_VERSION}/gnome-shell${ELSE_DARK}.scss" "${THEME_TEMP}/gnome-shell/gnome-shell.css"
+  else
+    cp -r "${SRC_DIR}/src/gnome-shell/theme-${GS_VERSION}/gnome-shell${ELSE_DARK}.css" "${THEME_TEMP}/gnome-shell/gnome-shell.css"
+  fi
+
+  if check_exist "${COMMON_CSS_FILE}"; then # CSS-based theme
+    if check_exist "${UBUNTU_CSS_FILE}"; then
+      TARGET="${UBUNTU_CSS_FILE}"
+    elif check_exist "${ZORIN_CSS_FILE}"; then
+      TARGET="${ZORIN_CSS_FILE}"
+    fi
+
+    backup_file "${COMMON_CSS_FILE}"; backup_file "${TARGET}"
+
+    if check_exist "${GS_THEME_DIR}/${name}"; then
+      rm -rf "${GS_THEME_DIR}/${name}"
+    fi
+
+    cp -rf "${THEME_TEMP}/gnome-shell"                                                       "${GS_THEME_DIR}/${name}"
+    ln -sf "${GS_THEME_DIR}/${name}/gnome-shell.css"                                         "${COMMON_CSS_FILE}"
+    ln -sf "${GS_THEME_DIR}/${name}/gnome-shell.css"                                         "${TARGET}"
+
+    # Fix previously installed theme
+    restore_file "${ETC_CSS_FILE}"
+  else # GR-based theme
+    if check_exist "$POP_OS_GR_FILE"; then
+      TARGET="${POP_OS_GR_FILE}"
+    elif check_exist "$YARU_GR_FILE"; then
+      TARGET="${YARU_GR_FILE}"
+    elif check_exist "$ZORIN_GR_FILE"; then
+      TARGET="${ZORIN_GR_FILE}"
+    elif check_exist "$MISC_GR_FILE"; then
+      TARGET="${MISC_GR_FILE}"
+    fi
+
+    backup_file "${TARGET}"
+    glib-compile-resources --sourcedir="${THEME_TEMP}/gnome-shell" --target="${TARGET}" "${GS_GR_XML_FILE}"
+
+    # Fix previously installed theme
+    restore_file "${ETC_GR_FILE}"
+  fi
+}
+
+uninstall_gdm_theme() {
+  rm -rf "${GS_THEME_DIR}/$THEME_NAME"
+  restore_file "${COMMON_CSS_FILE}"; restore_file "${UBUNTU_CSS_FILE}"
+  restore_file "${ZORIN_CSS_FILE}"; restore_file "${ETC_CSS_FILE}"
+  restore_file "${POP_OS_GR_FILE}"; restore_file "${YARU_GR_FILE}"
+  restore_file "${MISC_GR_FILE}"; restore_file "${ETC_GR_FILE}"
+  restore_file "${ZORIN_GR_FILE}"
+}
+
+while [[ $# -gt 0 ]]; do
+  case "${1}" in
+    -d|--dest)
+      dest="${2}"
+      if [[ ! -d "${dest}" ]]; then
+        echo -e "ERROR: Destination directory does not exist."
+        exit 1
+      fi
+      shift 2
+      ;;
+    -n|--name)
+      name="${2}"
+      shift 2
+      ;;
+    -i|--icon)
+      icon="${2}"
+      shift 2
+      ;;
+    -g|--gdm)
+      gdm='true'
+      shift
+      ;;
+    -l|--libadwaita)
+      libadwaita='true'
+      shift
+      ;;
+    -r|--remove|-u|--uninstall)
+      remove='true'
+      shift
+      ;;
+    -t|--theme)
+      accent='true'
+      shift
+      for theme in "${@}"; do
+        case "${theme}" in
+          default)
+            themes+=("${THEME_VARIANTS[0]}")
+            shift 1
+            ;;
+          manjaro)
+            themes+=("${THEME_VARIANTS[1]}")
+            shift 1
+            ;;
+          ubuntu)
+            themes+=("${THEME_VARIANTS[2]}")
+            shift 1
+            ;;
+          all)
+            themes+=("${THEME_VARIANTS[@]}")
+            shift 1
+            ;;
+          -*|--*)
+            break
+            ;;
+          *)
+            echo -e "ERROR: Unrecognized theme variant '$1'."
+            echo -e "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
+      ;;
+    -c|--color)
+      shift
+      for color in "${@}"; do
+        case "${color}" in
+          standard)
+            colors+=("${COLOR_VARIANTS[0]}")
+            lcolors+=("${COLOR_VARIANTS[0]}")
+            gcolors+=("${COLOR_VARIANTS[0]}")
+            shift
+            ;;
+          light)
+            colors+=("${COLOR_VARIANTS[1]}")
+            lcolors+=("${COLOR_VARIANTS[1]}")
+            gcolors+=("${COLOR_VARIANTS[1]}")
+            shift
+            ;;
+          dark)
+            colors+=("${COLOR_VARIANTS[2]}")
+            lcolors+=("${COLOR_VARIANTS[2]}")
+            gcolors+=("${COLOR_VARIANTS[2]}")
+            shift
+            ;;
+          -*|--*)
+            break
+            ;;
+          *)
+            echo -e "ERROR: Unrecognized color variant '$1'."
+            echo -e "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
+      ;;
+    --tweaks)
+      shift
+      for tweak in "${@}"; do
+        case "${tweak}" in
+          image)
+            image='true'
+            shift
+            ;;
+          round)
+            window='round'
+            shift
+            ;;
+          square)
+            square='true'
+            shift
+            ;;
+          -*|--*)
+            break
+            ;;
+          *)
+            echo -e "ERROR: Unrecognized tweak variant '$1'."
+            echo -e "Try '$0 --help' for more information."
+            exit 1
+            ;;
+        esac
+      done
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      echo -e "ERROR: Unrecognized installation option '$1'."
+      echo -e "Try '$0 --help' for more information."
+      exit 1
+      ;;
+  esac
+done
 
 # check command avalibility
 function has_command() {
