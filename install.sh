@@ -25,6 +25,22 @@ theme_color='default'
 
 SASSC_OPT="-M -t expanded"
 
+if [[ "$(command -v gnome-shell)" ]]; then
+  gnome-shell --version
+  SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -1)"
+  if [[ "${SHELL_VERSION:-}" -ge "44" ]]; then
+    GS_VERSION="44-0"
+  elif [[ "${SHELL_VERSION:-}" -ge "42" ]]; then
+    GS_VERSION="42-0"
+  elif [[ "${SHELL_VERSION:-}" -ge "40" ]]; then
+    GS_VERSION="40-0"
+  else
+    GS_VERSION="3-32"
+  fi
+  else
+    echo "'gnome-shell' not found, using styles for last gnome-shell version available."
+    GS_VERSION="44-0"
+fi
 
 usage() {
 cat << EOF
@@ -150,9 +166,44 @@ install() {
   cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-4.0/thumbnail.png
 
   # GNOME SHELL
-  
+  mkdir -p                                                                           ${THEME_DIR}/gnome-shell
+  cp -r ${SRC_DIR}/src/gnome-shell/common-assets                                     ${THEME_DIR}/gnome-shell/assets
+  # cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/{background.jpg,calendar-today.svg} ${THEME_DIR}/gnome-shell/assets
+  cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/assets${ELSE_DARK}/*.svg           ${THEME_DIR}/gnome-shell/assets
+
+  if [[ -f ${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg ]] ; then
+    cp -r ${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg                          ${THEME_DIR}/gnome-shell/assets/activities.svg
+  else
+    echo "${icon} icon not supported, Qogir icon will install..."
+    cp -r ${SRC_DIR}/src/gnome-shell/logos/logo-qogir.svg                            ${THEME_DIR}/gnome-shell/assets/activities.svg
+  fi
+
+  cp -r ${SRC_DIR}/src/gnome-shell/icons                                             ${THEME_DIR}/gnome-shell
+  cp -r ${SRC_DIR}/src/gnome-shell/pad-osd.css                                       ${THEME_DIR}/gnome-shell
+
+
+  if [[ "$tweaks" == 'true' ]]; then
+    sassc $SASSC_OPT ${SRC_DIR}/src/gnome-shell/theme-${GS_VERSION}/gnome-shell${ELSE_DARK}.scss ${THEME_DIR}/gnome-shell/gnome-shell.css
+  else
+    cp -r ${SRC_DIR}/src/gnome-shell/theme-${GS_VERSION}/gnome-shell${ELSE_DARK}.css ${THEME_DIR}/gnome-shell/gnome-shell.css
+  fi
+
+  cd ${THEME_DIR}/gnome-shell
+  ln -sf assets/no-events.svg no-events.svg
+  ln -sf assets/process-working.svg process-working.svg
+  ln -sf assets/no-notifications.svg no-notifications.svg
+
   # CINNAMON
-  
+  mkdir -p                                                                           ${THEME_DIR}/cinnamon
+  cp -r ${SRC_DIR}/src/cinnamon/assets${theme}/common-assets                         ${THEME_DIR}/cinnamon
+  cp -r ${SRC_DIR}/src/cinnamon/assets${theme}/assets${ELSE_DARK}                    ${THEME_DIR}/cinnamon/assets
+  if [[ "$tweaks" == 'true' ]]; then
+    sassc $SASSC_OPT ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.scss               ${THEME_DIR}/cinnamon/cinnamon.css
+  else
+    cp -r ${SRC_DIR}/src/cinnamon/cinnamon${ELSE_DARK}.css                           ${THEME_DIR}/cinnamon/cinnamon.css
+  fi
+
+  cp -r ${SRC_DIR}/src/cinnamon/thumbnail${theme}${ELSE_DARK}.png                    ${THEME_DIR}/cinnamon/thumbnail.png
 
   # METACITY
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
