@@ -15,8 +15,8 @@ maximize-toggled-inactive
 maximize-toggled-prelight
 maximize-toggled-pressed
 menu-active
-menu-inactive
-menu-prelight
+menu-active
+menu-active
 menu-pressed
 shade-active
 shade-inactive
