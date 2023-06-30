@@ -25,7 +25,7 @@ usage() {
   printf "  %-25s%s\n" "-l, --logo VARIANTS" "Specify nautilus logo [arch|budgie|debian|fedora|gnome|gentoo|manjaro|ubuntu] (Default: qogir icon)"
   printf "  %-25s%s\n" "-w, --Win VARIANTS..." "Specify titlebutton variant(s) [standard|square] (Default: All variants)"
   printf "  %-25s%s\n" "-t, --theme VARIANTS..." "Specify theme primary color variant(s) [standard|manjaro|ubuntu] (Default: All variants)"
-  printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|light|dark] (Default: All variants)"
+  printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|light|Dark] (Default: All variants)"
   printf "  %-25s%s\n" "-i, --image VARIANTS..." "Install theme with nautilus background image"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme, this option need root user authority! please run this with sudo"
   printf "  %-25s%s\n" "-r, --revert" "revert GDM theme, this option need root user authority! please run this with sudo"
@@ -40,7 +40,7 @@ install() {
   local color=${5}
   local logo=${6}
 
-  [[ ${color} == '-Dark' ]] && local ELSE_DARK=${color}
+  [[ ${color} == '-Dark' ]] && local ELSE_Dark=${color}
   [[ ${color} == '-Light' ]] && local ELSE_LIGHT=${color}
 
   local THEME_DIR=${dest}/${name}${theme}${Win}${color}
@@ -62,13 +62,13 @@ install() {
   echo "[X-GNOME-Metatheme]"                                                      >> ${THEME_DIR}/index.theme
   echo "GtkTheme=${name}${theme}${Win}${color}"                                   >> ${THEME_DIR}/index.theme
   echo "MetacityTheme=${name}${theme}${Win}${color}"                              >> ${THEME_DIR}/index.theme
-  echo "IconTheme=${name}${theme}${ELSE_DARK}"                                    >> ${THEME_DIR}/index.theme
+  echo "IconTheme=${name}${theme}${ELSE_Dark}"                                    >> ${THEME_DIR}/index.theme
   echo "CursorTheme=Adwaita"                                                      >> ${THEME_DIR}/index.theme
   echo "ButtonLayout=menu:minimize,maximize,close"                                >> ${THEME_DIR}/index.theme
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-2.0
   cp -r ${SRC_DIR}/src/gtk-2.0/{apps.rc,panel.rc,main.rc,xfce-notify.rc}             ${THEME_DIR}/gtk-2.0
-  cp -r ${SRC_DIR}/src/gtk-2.0/assets/assets${theme}${ELSE_DARK}                     ${THEME_DIR}/gtk-2.0/assets
+  cp -r ${SRC_DIR}/src/gtk-2.0/assets/assets${theme}${ELSE_Dark}                     ${THEME_DIR}/gtk-2.0/assets
   cp -r ${SRC_DIR}/src/gtk-2.0/theme${theme}/gtkrc${color}                           ${THEME_DIR}/gtk-2.0/gtkrc
   cp -r ${SRC_DIR}/src/gtk-2.0/menubar-toolbar${color}.rc                            ${THEME_DIR}/gtk-2.0/menubar-toolbar.rc
 
@@ -88,7 +88,7 @@ install() {
   cp -r ${SRC_DIR}/src/gtk/theme${theme}-3.0/gtk${Win}${color}.css                   ${THEME_DIR}/gtk-3.0/gtk.css
   [[ ${color} != '-Dark' ]] && \
   cp -r ${SRC_DIR}/src/gtk/theme${theme}-3.0/gtk${Win}-Dark.css                      ${THEME_DIR}/gtk-3.0/gtk-Dark.css
-  cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-3.0/thumbnail.png
+  cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_Dark}.png                  ${THEME_DIR}/gtk-3.0/thumbnail.png
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-4.0
   cp -r ${SRC_DIR}/src/gtk/assets/assets${theme}                                     ${THEME_DIR}/gtk-4.0/assets
@@ -106,12 +106,12 @@ install() {
   cp -r ${SRC_DIR}/src/gtk/theme${theme}-4.0/gtk${Win}${color}.css                   ${THEME_DIR}/gtk-4.0/gtk.css
   [[ ${color} != '-Dark' ]] && \
   cp -r ${SRC_DIR}/src/gtk/theme${theme}-4.0/gtk${Win}-Dark.css                      ${THEME_DIR}/gtk-4.0/gtk-Dark.css
-  cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-4.0/thumbnail.png
+  cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_Dark}.png                  ${THEME_DIR}/gtk-4.0/thumbnail.png
 
   mkdir -p                                                                           ${THEME_DIR}/gnome-shell
   cp -r ${SRC_DIR}/src/gnome-shell/common-assets                                     ${THEME_DIR}/gnome-shell/assets
   cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/*.svg                              ${THEME_DIR}/gnome-shell/assets
-  cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/assets${ELSE_DARK}/*.svg           ${THEME_DIR}/gnome-shell/assets
+  cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/assets${ELSE_Dark}/*.svg           ${THEME_DIR}/gnome-shell/assets
   cp -r ${SRC_DIR}/src/gnome-shell/background.jpeg                                   ${THEME_DIR}/gnome-shell/background.jpeg
 
   if [[ -f ${SRC_DIR}/src/gnome-shell/logos/logo-${logo}.svg ]] ; then
@@ -137,9 +137,9 @@ install() {
 
   mkdir -p                                                                           ${THEME_DIR}/cinnamon
   cp -r ${SRC_DIR}/src/cinnamon/assets${theme}/common-assets                         ${THEME_DIR}/cinnamon
-  cp -r ${SRC_DIR}/src/cinnamon/assets${theme}/assets${ELSE_DARK}                    ${THEME_DIR}/cinnamon/assets
-  cp -r ${SRC_DIR}/src/cinnamon/theme${theme}/cinnamon${ELSE_DARK}.css               ${THEME_DIR}/cinnamon/cinnamon.css
-  cp -r ${SRC_DIR}/src/cinnamon/thumbnail${theme}${ELSE_DARK}.png                    ${THEME_DIR}/cinnamon/thumbnail.png
+  cp -r ${SRC_DIR}/src/cinnamon/assets${theme}/assets${ELSE_Dark}                    ${THEME_DIR}/cinnamon/assets
+  cp -r ${SRC_DIR}/src/cinnamon/theme${theme}/cinnamon${ELSE_Dark}.css               ${THEME_DIR}/cinnamon/cinnamon.css
+  cp -r ${SRC_DIR}/src/cinnamon/thumbnail${theme}${ELSE_Dark}.png                    ${THEME_DIR}/cinnamon/thumbnail.png
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
   cp -r ${SRC_DIR}/src/metacity-1/assets${ELSE_LIGHT}${Win}/*.png                    ${THEME_DIR}/metacity-1
@@ -356,6 +356,10 @@ while [[ $# -gt 0 ]]; do
             Wins+=("${Win_VARIANTS[0]}")
             shift 1
             ;;
+          square)
+            Wins+=("${Win_VARIANTS[1]}")
+            shift 1
+            ;;
           -*|--*)
             break
             ;;
@@ -373,6 +377,14 @@ while [[ $# -gt 0 ]]; do
         case "${theme}" in
           standard)
             themes+=("${THEME_VARIANTS[0]}")
+            shift 1
+            ;;
+          manjaro)
+            themes+=("${THEME_VARIANTS[1]}")
+            shift 1
+            ;;
+          ubuntu)
+            themes+=("${THEME_VARIANTS[2]}")
             shift 1
             ;;
           -*|--*)
@@ -394,7 +406,7 @@ while [[ $# -gt 0 ]]; do
             colors+=("${COLOR_VARIANTS[0]}")
             shift 1
             ;;
-          Light)
+          light)
             colors+=("${COLOR_VARIANTS[1]}")
             shift 1
             ;;
