@@ -17,18 +17,6 @@ Win_VARIANTS=('' '-Win')
 COLOR_VARIANTS=('' '-Light' '-Dark')
 LOGO_NAME=''
 
-if [[ "$(command -v gnome-shell)" ]]; then
-  SHELL_VERSION="$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f -2)"
-  if [[ "${SHELL_VERSION:-}" == '40.0' ]]; then
-    GS_VERSION="new"
-  else
-    GS_VERSION="old"
-  fi
-  else
-    echo "'gnome-shell' not found, using styles for last gnome-shell version available."
-    GS_VERSION="new"
-fi
-
 usage() {
   printf "%s\n" "Usage: $0 [OPTIONS...]"
   printf "\n%s\n" "OPTIONS:"
@@ -52,8 +40,8 @@ install() {
   local color=${5}
   local logo=${6}
 
-  [[ ${color} == '-dark' ]] && local ELSE_DARK=${color}
-  [[ ${color} == '-light' ]] && local ELSE_LIGHT=${color}
+  [[ ${color} == '-Dark' ]] && local ELSE_DARK=${color}
+  [[ ${color} == '-Light' ]] && local ELSE_LIGHT=${color}
 
   local THEME_DIR=${dest}/${name}${theme}${Win}${color}
 
@@ -98,8 +86,8 @@ install() {
 
   cp -r ${SRC_DIR}/src/gtk/assets/assets-common/*                                    ${THEME_DIR}/gtk-3.0/assets
   cp -r ${SRC_DIR}/src/gtk/theme${theme}-3.0/gtk${Win}${color}.css                   ${THEME_DIR}/gtk-3.0/gtk.css
-  [[ ${color} != '-dark' ]] && \
-  cp -r ${SRC_DIR}/src/gtk/theme${theme}-3.0/gtk${Win}-dark.css                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
+  [[ ${color} != '-Dark' ]] && \
+  cp -r ${SRC_DIR}/src/gtk/theme${theme}-3.0/gtk${Win}-Dark.css                      ${THEME_DIR}/gtk-3.0/gtk-Dark.css
   cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-3.0/thumbnail.png
 
   mkdir -p                                                                           ${THEME_DIR}/gtk-4.0
@@ -116,8 +104,8 @@ install() {
 
   cp -r ${SRC_DIR}/src/gtk/assets/assets-common/*                                    ${THEME_DIR}/gtk-4.0/assets
   cp -r ${SRC_DIR}/src/gtk/theme${theme}-4.0/gtk${Win}${color}.css                   ${THEME_DIR}/gtk-4.0/gtk.css
-  [[ ${color} != '-dark' ]] && \
-  cp -r ${SRC_DIR}/src/gtk/theme${theme}-4.0/gtk${Win}-dark.css                      ${THEME_DIR}/gtk-4.0/gtk-dark.css
+  [[ ${color} != '-Dark' ]] && \
+  cp -r ${SRC_DIR}/src/gtk/theme${theme}-4.0/gtk${Win}-Dark.css                      ${THEME_DIR}/gtk-4.0/gtk-Dark.css
   cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-4.0/thumbnail.png
 
   mkdir -p                                                                           ${THEME_DIR}/gnome-shell
