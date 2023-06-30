@@ -379,14 +379,6 @@ while [[ $# -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[0]}")
             shift 1
             ;;
-          manjaro)
-            themes+=("${THEME_VARIANTS[1]}")
-            shift 1
-            ;;
-          ubuntu)
-            themes+=("${THEME_VARIANTS[2]}")
-            shift 1
-            ;;
           -*|--*)
             break
             ;;
