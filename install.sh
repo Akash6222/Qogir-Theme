@@ -13,8 +13,8 @@ fi
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
 THEME_NAME=Qogir
-Win_VARIANTS=('' '-Win')
-COLOR_VARIANTS=('' '-Light' '-Dark')
+Win_VARIANTS=('-Win')
+COLOR_VARIANTS=('-Light' '-Dark')
 LOGO_NAME=''
 
 usage() {
