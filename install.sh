@@ -130,10 +130,10 @@ install() {
   cp -r ${SRC_DIR}/src/gtk/assets/assets-common/*                                    ${THEME_DIR}/gtk-3.0/assets
 
   if [[ "$tweaks" == 'true' ]]; then
-    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-3.0/gtk${color}.scss                   ${THEME_DIR}/gtk-3.0/gtk.css
+    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-3.0/gtk.scss                   ${THEME_DIR}/gtk-3.0/gtk.css
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-3.0/gtk-Dark.scss                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
   else
-    cp -r ${SRC_DIR}/src/gtk/theme-3.0/gtk${color}.css                               ${THEME_DIR}/gtk-3.0/gtk.css
+    cp -r ${SRC_DIR}/src/gtk/theme-3.0/gtk.css                               ${THEME_DIR}/gtk-3.0/gtk.css
     cp -r ${SRC_DIR}/src/gtk/theme-3.0/gtk-Dark.css                                  ${THEME_DIR}/gtk-3.0/gtk-dark.css
   fi
 
@@ -155,10 +155,10 @@ install() {
   cp -r ${SRC_DIR}/src/gtk/assets/assets-common/*                                    ${THEME_DIR}/gtk-4.0/assets
 
   if [[ "$tweaks" == 'true' ]]; then
-    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-4.0/gtk${color}.scss                   ${THEME_DIR}/gtk-4.0/gtk.css
+    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-4.0/gtk.scss                   ${THEME_DIR}/gtk-4.0/gtk.css
     sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-4.0/gtk-Dark.scss                      ${THEME_DIR}/gtk-4.0/gtk-dark.css
   else
-    cp -r ${SRC_DIR}/src/gtk/theme-4.0/gtk${color}.css                               ${THEME_DIR}/gtk-4.0/gtk.css
+    cp -r ${SRC_DIR}/src/gtk/theme-4.0/gtk.css                               ${THEME_DIR}/gtk-4.0/gtk.css
     cp -r ${SRC_DIR}/src/gtk/theme-4.0/gtk-Dark.css                                  ${THEME_DIR}/gtk-4.0/gtk-dark.css
   fi
 
