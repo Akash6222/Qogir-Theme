@@ -13,10 +13,8 @@ fi
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
 THEME_NAME=Qogir
-THEME_VARIANTS=('' '-manjaro' '-ubuntu')
 Win_VARIANTS=('' '-Win')
-COLOR_VARIANTS=('' '-light' '-dark')
-LOGO_VARIANTS=('' '-arch' '-budgie' '-debian' '-fedora' '-gnome' '-gentoo' '-manjaro' '-ubuntu' '-qogir')
+COLOR_VARIANTS=('' '-Light' '-Dark')
 LOGO_NAME=''
 
 if [[ "$(command -v gnome-shell)" ]]; then
