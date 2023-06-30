@@ -13,9 +13,7 @@ fi
 SRC_DIR=$(cd $(dirname $0) && pwd)
 
 THEME_NAME=Qogir
-Win_VARIANTS=('-Win')
-COLOR_VARIANTS=('-Light' '-Dark')
-LOGO_NAME=''
+COLOR_VARIANTS=('' '-Light' '-Dark')
 
 usage() {
   printf "%s\n" "Usage: $0 [OPTIONS...]"
@@ -358,25 +356,6 @@ while [[ $# -gt 0 ]]; do
             ;;
           square)
             Wins+=("${Win_VARIANTS[1]}")
-            shift 1
-            ;;
-          -*|--*)
-            break
-            ;;
-          *)
-            echo "ERROR: Unrecognized color variant '$1'."
-            echo "Try '$0 --help' for more information."
-            exit 1
-            ;;
-        esac
-      done
-      ;;
-    -t|--theme)
-      shift
-      for theme in "${@}"; do
-        case "${theme}" in
-          standard)
-            themes+=("${THEME_VARIANTS[0]}")
             shift 1
             ;;
           -*|--*)
