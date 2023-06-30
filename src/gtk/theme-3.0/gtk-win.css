@@ -1785,14 +1785,14 @@ headerbar.selection-mode .selection-menu .arrow {
 }
 
 headerbar.default-decoration:not(.csd) > button.titlebutton {
-  min-height: 23px;
-  min-width: 23px;
-  padding: 2px;
+  min-width: 38px;
+  min-height: 30px;
+  margin: 0 -3px;
 }
 
 headerbar.default-decoration:not(.csd) {
   min-height: 30px;
-  padding: 0 8px;
+  padding: 0 3px;
   background-color: #282A33;
 }
 
@@ -4749,6 +4749,139 @@ messagedialog.csd decoration {
   box-shadow: none;
 }
 
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration > box.horizontal.left > button.titlebutton.close, headerbar.default-decoration > box.horizontal.left > button.titlebutton.close, .default-decoration.titlebar > box.horizontal.left > button.titlebutton.close {
+  margin-left: -3px;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration > box.horizontal.left > button.titlebutton.maximize, headerbar.default-decoration > box.horizontal.left > button.titlebutton.maximize, .default-decoration.titlebar > box.horizontal.left > button.titlebutton.maximize {
+  margin-left: -3px;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration > box.horizontal.left > button.titlebutton.minimize, headerbar.default-decoration > box.horizontal.left > button.titlebutton.minimize, .default-decoration.titlebar > box.horizontal.left > button.titlebutton.minimize {
+  margin-left: -3px;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration > box.horizontal.right > button.titlebutton.close, headerbar.default-decoration > box.horizontal.right > button.titlebutton.close, .default-decoration.titlebar > box.horizontal.right > button.titlebutton.close {
+  margin-right: -3px;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration > box.horizontal.right > button.titlebutton.maximize, headerbar.default-decoration > box.horizontal.right > button.titlebutton.maximize, .default-decoration.titlebar > box.horizontal.right > button.titlebutton.maximize {
+  margin-right: -3px;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration > box.horizontal.right > button.titlebutton.minimize, headerbar.default-decoration > box.horizontal.right > button.titlebutton.minimize, .default-decoration.titlebar > box.horizontal.right > button.titlebutton.minimize {
+  margin-right: -3px;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close, headerbar.default-decoration button.titlebutton.close, .default-decoration.titlebar button.titlebutton.close, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize, headerbar.default-decoration button.titlebutton.maximize, .default-decoration.titlebar button.titlebutton.maximize, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.minimize, headerbar.default-decoration button.titlebutton.minimize, .default-decoration.titlebar button.titlebutton.minimize, #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.restore, headerbar.default-decoration button.titlebutton.restore, .default-decoration.titlebar button.titlebutton.restore {
+  min-width: 38px;
+  min-height: 30px;
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close, headerbar.default-decoration button.titlebutton.close, .default-decoration.titlebar button.titlebutton.close {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-dark-smaller.png"), url("assets/titlebutton-close-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close:backdrop, headerbar.default-decoration button.titlebutton.close:backdrop, .default-decoration.titlebar button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark-smaller.png"), url("assets/titlebutton-close-backdrop-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close:hover, headerbar.default-decoration button.titlebutton.close:hover, .default-decoration.titlebar button.titlebutton.close:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark-smaller.png"), url("assets/titlebutton-close-hover-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.close:active, headerbar.default-decoration button.titlebutton.close:active, .default-decoration.titlebar button.titlebutton.close:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark-smaller.png"), url("assets/titlebutton-close-active-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize, headerbar.default-decoration button.titlebutton.maximize, .default-decoration.titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark-smaller.png"), url("assets/titlebutton-maximize-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:backdrop, headerbar.default-decoration button.titlebutton.maximize:backdrop, .default-decoration.titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark-smaller.png"), url("assets/titlebutton-maximize-backdrop-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:hover, headerbar.default-decoration button.titlebutton.maximize:hover, .default-decoration.titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark-smaller.png"), url("assets/titlebutton-maximize-hover-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:active, headerbar.default-decoration button.titlebutton.maximize:active, .default-decoration.titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark-smaller.png"), url("assets/titlebutton-maximize-active-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.minimize, headerbar.default-decoration button.titlebutton.minimize, .default-decoration.titlebar button.titlebutton.minimize {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark-smaller.png"), url("assets/titlebutton-minimize-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.minimize:backdrop, headerbar.default-decoration button.titlebutton.minimize:backdrop, .default-decoration.titlebar button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark-smaller.png"), url("assets/titlebutton-minimize-backdrop-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.minimize:hover, headerbar.default-decoration button.titlebutton.minimize:hover, .default-decoration.titlebar button.titlebutton.minimize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark-smaller.png"), url("assets/titlebutton-minimize-hover-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.minimize:active, headerbar.default-decoration button.titlebutton.minimize:active, .default-decoration.titlebar button.titlebutton.minimize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark-smaller.png"), url("assets/titlebutton-minimize-active-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.restore, headerbar.default-decoration button.titlebutton.restore, .default-decoration.titlebar button.titlebutton.restore {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-smaller.png"), url("assets/titlebutton-restore-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.restore:backdrop, headerbar.default-decoration button.titlebutton.restore:backdrop, .default-decoration.titlebar button.titlebutton.restore:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-smaller.png"), url("assets/titlebutton-restore-backdrop-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.restore:hover, headerbar.default-decoration button.titlebutton.restore:hover, .default-decoration.titlebar button.titlebutton.restore:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-smaller.png"), url("assets/titlebutton-restore-hover-dark-smaller@2.png"));
+}
+
+#MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.restore:active, headerbar.default-decoration button.titlebutton.restore:active, .default-decoration.titlebar button.titlebutton.restore:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-smaller.png"), url("assets/titlebutton-restore-active-dark-smaller@2.png"));
+}
+
+.fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize, #MozillaGtkWidget.background .fullscreen headerbar.titlebar.default-decoration button.titlebutton.maximize, .fullscreen headerbar.default-decoration button.titlebutton.maximize, .fullscreen .default-decoration.titlebar button.titlebutton.maximize, .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize, #MozillaGtkWidget.background .maximized headerbar.titlebar.default-decoration button.titlebutton.maximize, .maximized headerbar.default-decoration button.titlebutton.maximize, .maximized .default-decoration.titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-smaller.png"), url("assets/titlebutton-restore-dark-smaller@2.png"));
+}
+
+.fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:backdrop, #MozillaGtkWidget.background .fullscreen headerbar.titlebar.default-decoration button.titlebutton.maximize:backdrop, .fullscreen headerbar.default-decoration button.titlebutton.maximize:backdrop, .fullscreen .default-decoration.titlebar button.titlebutton.maximize:backdrop, .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:backdrop, #MozillaGtkWidget.background .maximized headerbar.titlebar.default-decoration button.titlebutton.maximize:backdrop, .maximized headerbar.default-decoration button.titlebutton.maximize:backdrop, .maximized .default-decoration.titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-smaller.png"), url("assets/titlebutton-restore-backdrop-dark-smaller@2.png"));
+}
+
+.fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:hover, #MozillaGtkWidget.background .fullscreen headerbar.titlebar.default-decoration button.titlebutton.maximize:hover, .fullscreen headerbar.default-decoration button.titlebutton.maximize:hover, .fullscreen .default-decoration.titlebar button.titlebutton.maximize:hover, .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:hover, #MozillaGtkWidget.background .maximized headerbar.titlebar.default-decoration button.titlebutton.maximize:hover, .maximized headerbar.default-decoration button.titlebutton.maximize:hover, .maximized .default-decoration.titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-smaller.png"), url("assets/titlebutton-restore-hover-dark-smaller@2.png"));
+}
+
+.fullscreen #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:active, #MozillaGtkWidget.background .fullscreen headerbar.titlebar.default-decoration button.titlebutton.maximize:active, .fullscreen headerbar.default-decoration button.titlebutton.maximize:active, .fullscreen .default-decoration.titlebar button.titlebutton.maximize:active, .maximized #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton.maximize:active, #MozillaGtkWidget.background .maximized headerbar.titlebar.default-decoration button.titlebutton.maximize:active, .maximized headerbar.default-decoration button.titlebutton.maximize:active, .maximized .default-decoration.titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-smaller.png"), url("assets/titlebutton-restore-active-dark-smaller@2.png"));
+}
+
+headerbar > box.horizontal.left > button.titlebutton.close, .titlebar > box.horizontal.left > button.titlebutton.close {
+  margin-left: -10px;
+}
+
+headerbar > box.horizontal.left > button.titlebutton.maximize, .titlebar > box.horizontal.left > button.titlebutton.maximize {
+  margin-left: -6px;
+}
+
+headerbar > box.horizontal.left > button.titlebutton.minimize, .titlebar > box.horizontal.left > button.titlebutton.minimize {
+  margin-left: -6px;
+}
+
+headerbar > box.horizontal.right > button.titlebutton.close, .titlebar > box.horizontal.right > button.titlebutton.close {
+  margin-right: -10px;
+}
+
+headerbar > box.horizontal.right > button.titlebutton.maximize, .titlebar > box.horizontal.right > button.titlebutton.maximize {
+  margin-right: -6px;
+}
+
+headerbar > box.horizontal.right > button.titlebutton.minimize, .titlebar > box.horizontal.right > button.titlebutton.minimize {
+  margin-right: -6px;
+}
+
 headerbar button.titlebutton, .titlebar button.titlebutton {
   margin: 0;
   padding: 0;
@@ -4774,8 +4907,8 @@ headerbar button.titlebutton:active, .titlebar button.titlebutton:active, header
 
 headerbar button.titlebutton.close, .titlebar button.titlebutton.close, headerbar button.titlebutton.maximize, .titlebar button.titlebutton.maximize, headerbar button.titlebutton.minimize, .titlebar button.titlebutton.minimize, headerbar button.titlebutton.restore, .titlebar button.titlebutton.restore {
   padding: 0;
-  min-width: 27px;
-  min-height: 27px;
+  min-width: 38px;
+  min-height: 38px;
   color: transparent;
   background-color: transparent;
   background-position: center;
@@ -4789,83 +4922,83 @@ headerbar button.titlebutton.close:backdrop, .titlebar button.titlebutton.close:
 }
 
 headerbar button.titlebutton.close, .titlebar button.titlebutton.close {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-dark-win.png"), url("assets/titlebutton-close-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.close:backdrop, .titlebar button.titlebutton.close:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark-win.png"), url("assets/titlebutton-close-backdrop-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.close:hover, .titlebar button.titlebutton.close:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark-win.png"), url("assets/titlebutton-close-hover-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.close:active, .titlebar button.titlebutton.close:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark.png"), url("assets/titlebutton-close-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark-win.png"), url("assets/titlebutton-close-active-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.maximize, .titlebar button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark.png"), url("assets/titlebutton-maximize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark-win.png"), url("assets/titlebutton-maximize-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.maximize:backdrop, .titlebar button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark-win.png"), url("assets/titlebutton-maximize-backdrop-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.maximize:hover, .titlebar button.titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark-win.png"), url("assets/titlebutton-maximize-hover-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.maximize:active, .titlebar button.titlebutton.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark.png"), url("assets/titlebutton-maximize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark-win.png"), url("assets/titlebutton-maximize-active-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.minimize, .titlebar button.titlebutton.minimize {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark.png"), url("assets/titlebutton-minimize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark-win.png"), url("assets/titlebutton-minimize-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.minimize:backdrop, .titlebar button.titlebutton.minimize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark.png"), url("assets/titlebutton-minimize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark-win.png"), url("assets/titlebutton-minimize-backdrop-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.minimize:hover, .titlebar button.titlebutton.minimize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark.png"), url("assets/titlebutton-minimize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark-win.png"), url("assets/titlebutton-minimize-hover-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.minimize:active, .titlebar button.titlebutton.minimize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark-win.png"), url("assets/titlebutton-minimize-active-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.restore, .titlebar button.titlebutton.restore {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-win.png"), url("assets/titlebutton-restore-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.restore:backdrop, .titlebar button.titlebutton.restore:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-win.png"), url("assets/titlebutton-restore-backdrop-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.restore:hover, .titlebar button.titlebutton.restore:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-win.png"), url("assets/titlebutton-restore-hover-dark-win@2.png"));
 }
 
 headerbar button.titlebutton.restore:active, .titlebar button.titlebutton.restore:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-win.png"), url("assets/titlebutton-restore-active-dark-win@2.png"));
 }
 
 .fullscreen headerbar button.titlebutton.maximize, .fullscreen .titlebar button.titlebutton.maximize, .maximized headerbar button.titlebutton.maximize, .maximized .titlebar button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-win.png"), url("assets/titlebutton-restore-dark-win@2.png"));
 }
 
 .fullscreen headerbar button.titlebutton.maximize:backdrop, .fullscreen .titlebar button.titlebutton.maximize:backdrop, .maximized headerbar button.titlebutton.maximize:backdrop, .maximized .titlebar button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-win.png"), url("assets/titlebutton-restore-backdrop-dark-win@2.png"));
 }
 
 .fullscreen headerbar button.titlebutton.maximize:hover, .fullscreen .titlebar button.titlebutton.maximize:hover, .maximized headerbar button.titlebutton.maximize:hover, .maximized .titlebar button.titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-win.png"), url("assets/titlebutton-restore-hover-dark-win@2.png"));
 }
 
 .fullscreen headerbar button.titlebutton.maximize:active, .fullscreen .titlebar button.titlebutton.maximize:active, .maximized headerbar button.titlebutton.maximize:active, .maximized .titlebar button.titlebutton.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-win.png"), url("assets/titlebutton-restore-active-dark-win@2.png"));
 }
 
 .nemo-window .sidebar .view.cell:selected, .nemo-window .sidebar row.cell:selected, leaflet > scrolledwindow > viewport.frame > list > row.activatable:selected, hdyleaflet > box.vertical > scrolledwindow > viewport .sidebar list > row.activatable:selected, hdyleaflet > stack > frame > grid.vertical > scrolledwindow > viewport.frame > list.contacts-contact-list row.activatable.contact-data-row:selected,
@@ -6354,11 +6487,6 @@ window.background:not(.csd) > window > menu menuitem {
   background-color: #fafbfc;
 }
 
-#MozillaGtkWidget.background headerbar.titlebar {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 #MozillaGtkWidget.background scrollbar {
   background-color: #ffffff;
 }
@@ -6409,11 +6537,90 @@ window.background:not(.csd) > window > menu menuitem {
   color: #4a4c59;
 }
 
-window.background.chromium headerbar.titlebar button.titlebutton {
-  min-width: 23px;
-  min-height: 23px;
-  padding: 0 2px;
-  color: transparent;
+window.background.chromium headerbar.titlebar button.titlebutton.close, window.background.chromium headerbar.titlebar button.titlebutton.maximize, window.background.chromium headerbar.titlebar button.titlebutton.minimize, window.background.chromium headerbar.titlebar button.titlebutton.restore {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 3px;
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.close {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-dark-small.png"), url("assets/titlebutton-close-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.close:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark-small.png"), url("assets/titlebutton-close-backdrop-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.close:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark-small.png"), url("assets/titlebutton-close-hover-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.close:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark-small.png"), url("assets/titlebutton-close-active-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark-small.png"), url("assets/titlebutton-maximize-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark-small.png"), url("assets/titlebutton-maximize-backdrop-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark-small.png"), url("assets/titlebutton-maximize-hover-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark-small.png"), url("assets/titlebutton-maximize-active-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.minimize {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark-small.png"), url("assets/titlebutton-minimize-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark-small.png"), url("assets/titlebutton-minimize-backdrop-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.minimize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark-small.png"), url("assets/titlebutton-minimize-hover-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.minimize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark-small.png"), url("assets/titlebutton-minimize-active-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.restore {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-small.png"), url("assets/titlebutton-restore-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.restore:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-small.png"), url("assets/titlebutton-restore-backdrop-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.restore:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-small.png"), url("assets/titlebutton-restore-hover-dark-small@2.png"));
+}
+
+window.background.chromium headerbar.titlebar button.titlebutton.restore:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-small.png"), url("assets/titlebutton-restore-active-dark-small@2.png"));
+}
+
+window.maximized.background.chromium headerbar.titlebar button.titlebutton.maximize.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-small.png"), url("assets/titlebutton-restore-dark-small@2.png"));
+}
+
+window.maximized.background.chromium headerbar.titlebar button.titlebutton.maximize.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-small.png"), url("assets/titlebutton-restore-backdrop-dark-small@2.png"));
+}
+
+window.maximized.background.chromium headerbar.titlebar button.titlebutton.maximize.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-small.png"), url("assets/titlebutton-restore-hover-dark-small@2.png"));
+}
+
+window.maximized.background.chromium headerbar.titlebar button.titlebutton.maximize.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-small.png"), url("assets/titlebutton-restore-active-dark-small@2.png"));
 }
 
 window.background.chromium {
@@ -9695,112 +9902,112 @@ window.background.csd > leaflet > box.vertical > searchbar entry image:disabled,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close, .geary-titlebar-left button.titlebutton.close, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-dark-win.png"), url("assets/titlebutton-close-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.close:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.close:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.close:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close:backdrop, .geary-titlebar-left button.titlebutton.close:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark-win.png"), url("assets/titlebutton-close-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.close:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.close:hover, hdyleaflet > headerbar:first-child button.titlebutton.close:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close:hover, .geary-titlebar-left button.titlebutton.close:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark-win.png"), url("assets/titlebutton-close-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.close:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.close:active, hdyleaflet > headerbar:first-child button.titlebutton.close:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close:active, .geary-titlebar-left button.titlebutton.close:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark.png"), url("assets/titlebutton-close-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark-win.png"), url("assets/titlebutton-close-active-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize, hdyleaflet > headerbar:first-child button.titlebutton.maximize,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize, .geary-titlebar-left button.titlebutton.maximize, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark.png"), url("assets/titlebutton-maximize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark-win.png"), url("assets/titlebutton-maximize-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.maximize:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize:backdrop, .geary-titlebar-left button.titlebutton.maximize:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark-win.png"), url("assets/titlebutton-maximize-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:hover, hdyleaflet > headerbar:first-child button.titlebutton.maximize:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize:hover, .geary-titlebar-left button.titlebutton.maximize:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark-win.png"), url("assets/titlebutton-maximize-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:active, hdyleaflet > headerbar:first-child button.titlebutton.maximize:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize:active, .geary-titlebar-left button.titlebutton.maximize:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark.png"), url("assets/titlebutton-maximize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark-win.png"), url("assets/titlebutton-maximize-active-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize, hdyleaflet > headerbar:first-child button.titlebutton.minimize,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize, .geary-titlebar-left button.titlebutton.minimize, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark.png"), url("assets/titlebutton-minimize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark-win.png"), url("assets/titlebutton-minimize-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.minimize:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize:backdrop, .geary-titlebar-left button.titlebutton.minimize:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark.png"), url("assets/titlebutton-minimize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark-win.png"), url("assets/titlebutton-minimize-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize:hover, hdyleaflet > headerbar:first-child button.titlebutton.minimize:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize:hover, .geary-titlebar-left button.titlebutton.minimize:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark.png"), url("assets/titlebutton-minimize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark-win.png"), url("assets/titlebutton-minimize-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize:active, hdyleaflet > headerbar:first-child button.titlebutton.minimize:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize:active, .geary-titlebar-left button.titlebutton.minimize:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark-win.png"), url("assets/titlebutton-minimize-active-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore, hdyleaflet > headerbar:first-child button.titlebutton.restore,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore, .geary-titlebar-left button.titlebutton.restore, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-win.png"), url("assets/titlebutton-restore-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.restore:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore:backdrop, .geary-titlebar-left button.titlebutton.restore:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-win.png"), url("assets/titlebutton-restore-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore:hover, hdyleaflet > headerbar:first-child button.titlebutton.restore:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore:hover, .geary-titlebar-left button.titlebutton.restore:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-win.png"), url("assets/titlebutton-restore-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore:active, hdyleaflet > headerbar:first-child button.titlebutton.restore:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore:active, .geary-titlebar-left button.titlebutton.restore:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-win.png"), url("assets/titlebutton-restore-active-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize,
@@ -9814,7 +10021,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-win.png"), url("assets/titlebutton-restore-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize:backdrop, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize:backdrop, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:backdrop, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:backdrop, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop,
@@ -9828,7 +10035,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-win.png"), url("assets/titlebutton-restore-backdrop-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize:hover, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize:hover, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:hover, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:hover, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover,
@@ -9842,7 +10049,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize:hover, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-win.png"), url("assets/titlebutton-restore-hover-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize:active, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize:active, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:active, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:active, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:active,
@@ -9856,7 +10063,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:active, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize:active, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:active, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:active, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-win.png"), url("assets/titlebutton-restore-active-dark-win@2.png"));
 }
 
 hdyleaflet > headerbar:first-child,

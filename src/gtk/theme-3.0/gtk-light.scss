@@ -1,5 +1,5 @@
 $variant: 'light';
-$titlebar: 'dark';
+$titlebar: 'light';
 $trans: 'false';
 $menu: 'gnome';
 $titlebutton: 'circle';
@@ -8,8 +8,8 @@ $theme: 'default';
 @import '../../_sass/colors';
 @import '../../_sass/variables';
 @import '../../_sass/gtk/drawing';
-@import '../../_sass/gtk/common-4.0';
-@import '../../_sass/gtk/apps-4.0';
-// @import '../../_sass/gtk/granite';
+@import '../../_sass/gtk/common-3.0';
+@import '../../_sass/gtk/apps-3.0';
+@import '../../_sass/gtk/granite';
 @import '../../_sass/gtk/darksidebar_widgets';
 @import '../../_sass/gtk/colors-public';

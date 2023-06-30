@@ -1,9 +1,9 @@
 @keyframes header_ripple_effect {
   from {
-    background-image: radial-gradient(circle farthest-corner at center, #282A33 0%, transparent 0%);
+    background-image: radial-gradient(circle farthest-corner at center, #ffffff 0%, transparent 0%);
   }
   to {
-    background-image: radial-gradient(circle farthest-corner at center, #282A33 100%, transparent 0%);
+    background-image: radial-gradient(circle farthest-corner at center, #ffffff 100%, transparent 0%);
   }
 }
 
@@ -1092,7 +1092,7 @@ headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar)
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry + entry.warning,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error + entry.warning,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning + entry.error {
-  border-left-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry + entry:focus-within:not(:last-child),
@@ -1104,7 +1104,7 @@ headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar)
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:focus-within:not(:only-child) + entry,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:focus-within:not(:only-child) + entry {
-  border-left-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:focus-within:not(:only-child) + button,
@@ -1123,7 +1123,7 @@ headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar)
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:drop(active):not(:only-child) + entry,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:drop(active):not(:only-child) + entry {
-  border-left-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry:drop(active):not(:only-child) + button,
@@ -1142,7 +1142,7 @@ headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar)
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning:focus-within:not(:only-child) + entry,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning:focus-within:not(:only-child) + entry {
-  border-left-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.warning:focus-within:not(:only-child) + button,
@@ -1161,7 +1161,7 @@ headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar)
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error:focus-within:not(:only-child) + entry,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error:focus-within:not(:only-child) + entry {
-  border-left-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > entry.error:focus-within:not(:only-child) + button,
@@ -1175,7 +1175,7 @@ headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button:checked + entry,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button:active + entry,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button:checked + entry {
-  border-left-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(0, 0, 0, 0.12);
 }
 
 headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button + button,
@@ -1231,7 +1231,7 @@ headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar)
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button:not(:checked):not(:active):not(.suggested-action):not(.destructive-action):first-child:hover,
 headerbar.titlebar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) {
   box-shadow: inset 1px 0 transparent;
-  border-left-color: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(0, 0, 0, 0.12);
 }
 
 .linked.vertical > entry + entry {
@@ -1870,16 +1870,16 @@ actionbar > revealer > box {
 
 headerbar {
   padding: 0 10px;
-  color: rgba(228, 235, 241, 0.8);
+  color: rgba(62, 67, 91, 0.8);
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.15);
-  background-color: #282A33;
+  background-color: #ffffff;
   min-height: 38px;
 }
 
 headerbar:backdrop {
   transition: 200ms ease-out;
-  color: rgba(228, 235, 241, 0.5);
-  background-color: #2b2e37;
+  color: rgba(62, 67, 91, 0.5);
+  background-color: white;
 }
 
 headerbar .title {
@@ -1925,24 +1925,24 @@ headerbar.selection-mode .selection-menu .arrow {
 }
 
 .maximized headerbar {
-  background-color: #282a33;
-  border-color: #3e4250;
+  background-color: white;
+  border-color: #e6e6e6;
 }
 
 .maximized headerbar:backdrop {
-  background-color: #2b2e37;
+  background-color: white;
 }
 
 headerbar.default-decoration:not(.csd) windowcontrols button {
-  min-height: 23px;
-  min-width: 23px;
-  padding: 2px;
+  min-width: 38px;
+  min-height: 30px;
+  margin: 0 -3px;
 }
 
 headerbar.default-decoration:not(.csd) {
   min-height: 30px;
-  padding: 0 8px;
-  background-color: #282A33;
+  padding: 0 3px;
+  background-color: #ffffff;
 }
 
 headerbar.default-decoration:not(.csd) windowcontrols button {
@@ -1957,7 +1957,7 @@ headerbar.default-decoration:not(.csd) windowcontrols menubutton button {
 }
 
 headerbar.default-decoration, .csd headerbar.default-decoration, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop {
-  background-color: #282A33;
+  background-color: #ffffff;
   border-bottom-width: 0;
   box-shadow: none;
 }
@@ -2003,29 +2003,29 @@ headerbar.windowhandle viewswitcher button {
 }
 
 headerbar.windowhandle viewswitcher button:hover {
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(228, 235, 241, 0.06);
+  color: rgba(42, 44, 60, 0.8);
+  background-color: rgba(62, 67, 91, 0.06);
 }
 
 headerbar.windowhandle viewswitcher button:active {
-  color: rgba(228, 235, 241, 0.8);
-  background-color: rgba(228, 235, 241, 0.15);
+  color: rgba(62, 67, 91, 0.8);
+  background-color: rgba(62, 67, 91, 0.15);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5294e2 100%, transparent 0%) 0 0 3/0 0 3px;
 }
 
 headerbar.windowhandle viewswitcher button:checked {
-  color: rgba(228, 235, 241, 0.8);
-  background-color: rgba(228, 235, 241, 0.1);
+  color: rgba(62, 67, 91, 0.8);
+  background-color: rgba(62, 67, 91, 0.1);
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5294e2 100%, transparent 0%) 0 0 3/0 0 3px;
 }
 
 headerbar.windowhandle viewswitcher button:disabled {
-  color: rgba(228, 235, 241, 0.35);
+  color: rgba(62, 67, 91, 0.35);
   background-color: transparent;
 }
 
 headerbar.windowhandle viewswitcher button:checked:disabled {
-  color: rgba(228, 235, 241, 0.35);
+  color: rgba(62, 67, 91, 0.35);
   background-color: transparent;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(82, 148, 226, 0.35) 100%, transparent 0%) 0 0 3/0 0 3px;
 }
@@ -2038,12 +2038,12 @@ window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, w
 }
 
 .titlebar:not(headerbar) > separator {
-  background-image: image(#282A33);
+  background-image: image(#ffffff);
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.15);
 }
 
 .titlebar:not(headerbar) > separator:backdrop {
-  background-image: image(#282A33);
+  background-image: image(#ffffff);
 }
 
 headerbar separator.titlebutton, headerbar separator {
@@ -2055,9 +2055,9 @@ headerbar separator.titlebutton, headerbar separator {
 }
 
 headerbar entry {
-  color: rgba(228, 235, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #21232a;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #f7f7f7;
 }
 
 headerbar entry image, headerbar entry image:hover {
@@ -2069,9 +2069,9 @@ headerbar entry:backdrop {
 }
 
 headerbar entry:focus {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(104, 111, 151, 0.8);
   border-color: #5294e2;
-  background-color: #262830;
+  background-color: #fcfcfc;
   background-clip: border-box;
 }
 
@@ -2080,9 +2080,9 @@ headerbar entry:focus image {
 }
 
 headerbar entry:disabled {
-  color: rgba(228, 235, 241, 0.35);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: rgba(33, 35, 42, 0.85);
+  color: rgba(62, 67, 91, 0.35);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(247, 247, 247, 0.85);
 }
 
 headerbar entry selection:focus {
@@ -2099,7 +2099,7 @@ headerbar entry progress {
 headerbar entry.warning {
   color: white;
   border-color: #F27835;
-  background-color: #a15934;
+  background-color: #f7ae86;
 }
 
 headerbar entry.warning:focus {
@@ -2115,7 +2115,7 @@ headerbar entry.warning selection {
 headerbar entry.error {
   color: white;
   border-color: #FC4138;
-  background-color: #a73836;
+  background-color: #fd8d88;
 }
 
 headerbar entry.error:focus {
@@ -2129,10 +2129,10 @@ headerbar entry.error selection {
 }
 
 headerbar button {
-  color: rgba(228, 235, 241, 0.8);
+  color: rgba(62, 67, 91, 0.8);
   outline-offset: -3px;
-  background-color: rgba(40, 42, 51, 0);
-  border-color: rgba(40, 42, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
   background-clip: border-box;
   background-origin: border-box;
 }
@@ -2142,27 +2142,27 @@ headerbar button:backdrop {
 }
 
 headerbar button:hover {
-  color: rgba(228, 235, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #333641;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #f2f2f2;
 }
 
 headerbar button:active, headerbar button:checked {
   transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #ffffff;
-  border-color: #68a2e6;
+  border-color: #2679db;
   background-color: #5294e2;
   background-clip: border-box;
   background-origin: border-box;
 }
 
 headerbar button:disabled {
-  background-color: rgba(40, 42, 51, 0);
-  border-color: rgba(40, 42, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
 
 headerbar button:disabled label, headerbar button:disabled {
-  color: rgba(228, 235, 241, 0.3);
+  color: rgba(62, 67, 91, 0.3);
 }
 
 headerbar button:disabled:active, headerbar button:disabled:checked {
@@ -2180,24 +2180,24 @@ headerbar button:disabled:active, headerbar button:disabled:checked {
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .linked.nautilus-path-bar button.text-button:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(42, 44, 60, 0.8);
   background-color: transparent;
   box-shadow: inset 0 -2px rgba(82, 148, 226, 0.5);
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .linked.nautilus-path-bar button.text-button:checked, .nautilus-window headerbar.titlebar .path-bar-box .linked.nautilus-path-bar button.text-button:active {
-  color: rgba(228, 235, 241, 0.8);
+  color: rgba(62, 67, 91, 0.8);
   background-color: transparent;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #5294e2 100%, transparent 0%) 0 0 2/0 0 2px;
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .linked.nautilus-path-bar button.text-button:disabled {
-  color: rgba(228, 235, 241, 0.4);
+  color: rgba(62, 67, 91, 0.4);
   background-color: transparent;
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .linked.nautilus-path-bar button.text-button:checked:disabled {
-  color: rgba(228, 235, 241, 0.4);
+  color: rgba(62, 67, 91, 0.4);
   background-color: transparent;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), rgba(82, 148, 226, 0.4) 100%, transparent 0%) 0 0 2/0 0 2px;
 }
@@ -2267,7 +2267,7 @@ headerbar .linked:not(.vertical):not(.path-bar):not(.nautilus-path-bar) > button
 headerbar .linked:not(.vertical) > entry {
   margin-left: 1px;
   border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 headerbar .linked:not(.vertical) > entry:focus {
@@ -2277,9 +2277,9 @@ headerbar .linked:not(.vertical) > entry:focus {
 headerbar stackswitcher.linked:not(.vertical) > button {
   border-right-width: 0;
   border-left-width: 0;
-  background-color: #3e4250;
-  color: rgba(228, 235, 241, 0.8);
-  border-color: #55596c;
+  background-color: white;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 headerbar stackswitcher.linked:not(.vertical) > button:first-child {
@@ -2291,21 +2291,21 @@ headerbar stackswitcher.linked:not(.vertical) > button:last-child {
 }
 
 headerbar stackswitcher.linked:not(.vertical) > button:hover {
-  background-color: #4a4d5e;
+  background-color: #f7f7f7;
 }
 
 headerbar stackswitcher.linked:not(.vertical) > button:active, headerbar stackswitcher.linked:not(.vertical) > button:checked {
   color: #ffffff;
-  border-color: #68a2e6;
+  border-color: #2679db;
   background-color: #5294e2;
 }
 
 headerbar stackswitcher.linked:not(.vertical) > button:disabled {
-  color: rgba(228, 235, 241, 0.4);
+  color: rgba(62, 67, 91, 0.4);
 }
 
 headerbar stackswitcher.linked:not(.vertical) > button:disabled label {
-  color: rgba(228, 235, 241, 0.4);
+  color: rgba(62, 67, 91, 0.4);
 }
 
 headerbar button.suggested-action {
@@ -2337,12 +2337,12 @@ headerbar button.suggested-action:active, headerbar button.suggested-action:chec
 }
 
 headerbar button.suggested-action:disabled {
-  background-color: rgba(40, 42, 51, 0);
-  border-color: rgba(40, 42, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
 
 headerbar button.suggested-action:disabled label, headerbar button.suggested-action:disabled {
-  color: rgba(228, 235, 241, 0.3);
+  color: rgba(62, 67, 91, 0.3);
 }
 
 headerbar button.suggested-action:backdrop {
@@ -2378,12 +2378,12 @@ headerbar button.destructive-action:active, headerbar button.destructive-action:
 }
 
 headerbar button.destructive-action:disabled {
-  background-color: rgba(40, 42, 51, 0);
-  border-color: rgba(40, 42, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
 
 headerbar button.destructive-action:disabled label, headerbar button.destructive-action:disabled {
-  color: rgba(228, 235, 241, 0.3);
+  color: rgba(62, 67, 91, 0.3);
 }
 
 headerbar button.destructive-action:backdrop {
@@ -2396,50 +2396,50 @@ headerbar spinbutton:not(.vertical):focus {
 }
 
 headerbar spinbutton:not(.vertical) button {
-  color: rgba(228, 235, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #333641;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #f2f2f2;
 }
 
 headerbar spinbutton:not(.vertical) button:hover {
-  background-color: rgba(126, 131, 154, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 headerbar spinbutton:not(.vertical) button:active, headerbar spinbutton:not(.vertical) button:checked {
   color: #ffffff;
-  border-color: #68a2e6;
+  border-color: #2679db;
   background-color: #5294e2;
 }
 
 headerbar spinbutton:not(.vertical) button:disabled {
-  color: rgba(228, 235, 241, 0.2);
+  color: rgba(62, 67, 91, 0.2);
 }
 
 headerbar combobox:disabled {
-  color: rgba(228, 235, 241, 0.2);
+  color: rgba(62, 67, 91, 0.2);
 }
 
 headerbar combobox > .linked > button.combo {
-  color: rgba(228, 235, 241, 0.8);
+  color: rgba(62, 67, 91, 0.8);
   outline-offset: -3px;
-  background-color: rgba(40, 42, 51, 0);
-  border-color: rgba(40, 42, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
 
 headerbar combobox > .linked > button.combo:hover {
-  color: rgba(228, 235, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #333641;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #f2f2f2;
   box-shadow: none;
 }
 
 headerbar combobox > .linked > button.combo:disabled {
-  background-color: rgba(40, 42, 51, 0);
-  border-color: rgba(40, 42, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
 }
 
 headerbar combobox > .linked > button.combo:disabled label, headerbar combobox > .linked > button.combo:disabled {
-  color: rgba(228, 235, 241, 0.3);
+  color: rgba(62, 67, 91, 0.3);
 }
 
 headerbar combobox > .linked > entry.combo:dir(ltr) {
@@ -2463,7 +2463,7 @@ headerbar switch:backdrop {
 }
 
 headerbar progressbar trough {
-  background-color: #121216;
+  background-color: #e6e6e6;
 }
 
 headerbar progressbar:backdrop {
@@ -2475,13 +2475,13 @@ headerbar scale:backdrop {
 }
 
 headerbar scale slider {
-  background-color: #595e72;
-  border-color: rgba(13, 14, 17, 0.6);
+  background-color: white;
+  border-color: rgba(62, 67, 91, 0.5);
 }
 
 headerbar scale slider:hover {
-  background-color: #656a80;
-  border-color: rgba(13, 14, 17, 0.6);
+  background-color: white;
+  border-color: rgba(62, 67, 91, 0.5);
 }
 
 headerbar scale slider:active {
@@ -2490,16 +2490,16 @@ headerbar scale slider:active {
 }
 
 headerbar scale slider:disabled {
-  background-color: #4b4e5f;
-  border-color: rgba(13, 14, 17, 0.6);
+  background-color: white;
+  border-color: rgba(62, 67, 91, 0.5);
 }
 
 headerbar scale trough {
-  background-color: #121216;
+  background-color: #e6e6e6;
 }
 
 headerbar scale trough:disabled {
-  background-color: rgba(18, 18, 22, 0.95);
+  background-color: rgba(230, 230, 230, 0.95);
 }
 
 window.devel headerbar.titlebar {
@@ -2698,13 +2698,13 @@ treeview.view header.button.dnd:active {
 
 menubar {
   padding: 0;
-  background-color: #282a33;
-  color: rgba(228, 235, 241, 0.8);
+  background-color: white;
+  color: rgba(62, 67, 91, 0.8);
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.15);
 }
 
 menubar:backdrop {
-  color: rgba(228, 235, 241, 0.5);
+  color: rgba(62, 67, 91, 0.5);
 }
 
 menubar > item {
@@ -2717,12 +2717,12 @@ menubar > item {
 menubar > item:hover {
   background-color: #5294e2;
   box-shadow: none;
-  border-color: #68a2e6;
+  border-color: #2679db;
   color: #ffffff;
 }
 
 menubar > item:disabled {
-  color: rgba(228, 235, 241, 0.45);
+  color: rgba(62, 67, 91, 0.45);
 }
 
 menubar > item popover.menu.background > contents {
@@ -3303,10 +3303,6 @@ infobar switch {
   background-image: -gtk-scaled(url("assets/switch-selected.png"), url("assets/switch-selected@2.png"));
 }
 
-headerbar switch {
-  background-image: -gtk-scaled(url("assets/switch-dark.png"), url("assets/switch-dark@2.png"));
-}
-
 switch:checked {
   background-image: -gtk-scaled(url("assets/switch-active.png"), url("assets/switch-active@2.png"));
 }
@@ -3315,10 +3311,6 @@ menuitem:hover switch:checked,
 row:selected switch:checked,
 infobar switch:checked {
   background-image: -gtk-scaled(url("assets/switch-active-selected.png"), url("assets/switch-active-selected@2.png"));
-}
-
-headerbar switch:checked {
-  background-image: -gtk-scaled(url("assets/switch-active-dark.png"), url("assets/switch-active-dark@2.png"));
 }
 
 switch:disabled {
@@ -3331,10 +3323,6 @@ infobar switch:disabled {
   background-image: -gtk-scaled(url("assets/switch-insensitive-selected.png"), url("assets/switch-insensitive-selected@2.png"));
 }
 
-headerbar switch:disabled {
-  background-image: -gtk-scaled(url("assets/switch-insensitive-dark.png"), url("assets/switch-insensitive-dark@2.png"));
-}
-
 switch:checked:disabled {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive.png"), url("assets/switch-active-insensitive@2.png"));
 }
@@ -3343,10 +3331,6 @@ menuitem:hover switch:checked:disabled,
 row:selected switch:checked:disabled,
 infobar switch:checked:disabled {
   background-image: -gtk-scaled(url("assets/switch-active-insensitive-selected.png"), url("assets/switch-active-insensitive-selected@2.png"));
-}
-
-headerbar switch:checked:disabled {
-  background-image: -gtk-scaled(url("assets/switch-active-insensitive-dark.png"), url("assets/switch-active-insensitive-dark@2.png"));
 }
 
 .check,
@@ -4358,8 +4342,8 @@ window.dialog.message .linked:not(.vertical) > button:only-child {
 }
 
 window.dialog.message.background {
-  background-color: #282A33;
-  color: rgba(228, 235, 241, 0.8);
+  background-color: #ffffff;
+  color: rgba(62, 67, 91, 0.8);
 }
 
 window.dialog.message.background.csd.background {
@@ -4369,7 +4353,7 @@ window.dialog.message.background.csd.background {
 
 window.dialog.message .titlebar {
   min-height: 20px;
-  background-color: #282A33;
+  background-color: #ffffff;
   border-bottom: none;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -4377,7 +4361,7 @@ window.dialog.message .titlebar {
 }
 
 window.dialog.message .titlebar:backdrop {
-  background-color: #282A33;
+  background-color: #ffffff;
 }
 
 window.dialog.message .dialog-action-area button {
@@ -4385,17 +4369,17 @@ window.dialog.message .dialog-action-area button {
   border-radius: 0;
   border: none;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  background-color: #282A33;
-  color: rgba(228, 235, 241, 0.8);
+  background-color: #ffffff;
+  color: rgba(62, 67, 91, 0.8);
 }
 
 window.dialog.message .dialog-action-area button:not(.suggested-action):not(.destructive-action):hover {
-  background-color: rgba(228, 235, 241, 0.06);
+  background-color: rgba(62, 67, 91, 0.06);
 }
 
 window.dialog.message .dialog-action-area button:not(.suggested-action):not(.destructive-action):active, window.dialog.message .dialog-action-area button:not(.suggested-action):not(.destructive-action):checked {
-  background-color: rgba(228, 235, 241, 0.1);
-  color: rgba(228, 235, 241, 0.8);
+  background-color: rgba(62, 67, 91, 0.1);
+  color: rgba(62, 67, 91, 0.8);
 }
 
 filechooser .dialog-action-box {
@@ -5025,6 +5009,95 @@ window.ssd {
   font-family: monospace;
 }
 
+.default-decoration headerbar windowcontrols > button.close, .default-decoration headerbar windowcontrols > button.maximize, .default-decoration headerbar windowcontrols > button.minimize {
+  min-width: 38px;
+  min-height: 30px;
+}
+
+.default-decoration headerbar windowcontrols > button.close {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-smaller.png"), url("assets/titlebutton-close-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.close:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-smaller.png"), url("assets/titlebutton-close-backdrop-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.close:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-smaller.png"), url("assets/titlebutton-close-hover-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.close:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active-smaller.png"), url("assets/titlebutton-close-active-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-smaller.png"), url("assets/titlebutton-maximize-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-smaller.png"), url("assets/titlebutton-maximize-backdrop-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-smaller.png"), url("assets/titlebutton-maximize-hover-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-smaller.png"), url("assets/titlebutton-maximize-active-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.minimize {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-smaller.png"), url("assets/titlebutton-minimize-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.minimize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-smaller.png"), url("assets/titlebutton-minimize-backdrop-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.minimize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-smaller.png"), url("assets/titlebutton-minimize-hover-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.minimize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-smaller.png"), url("assets/titlebutton-minimize-active-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.restore {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-smaller.png"), url("assets/titlebutton-restore-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.restore:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-smaller.png"), url("assets/titlebutton-restore-backdrop-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.restore:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-smaller.png"), url("assets/titlebutton-restore-hover-smaller@2.png"));
+}
+
+.default-decoration headerbar windowcontrols > button.restore:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-smaller.png"), url("assets/titlebutton-restore-active-smaller@2.png"));
+}
+
+.fullscreen .default-decoration headerbar windowcontrols > button.maximize, .default-decoration .fullscreen headerbar windowcontrols > button.maximize, .maximized .default-decoration headerbar windowcontrols > button.maximize, .default-decoration .maximized headerbar windowcontrols > button.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-smaller.png"), url("assets/titlebutton-restore-smaller@2.png"));
+}
+
+.fullscreen .default-decoration headerbar windowcontrols > button.maximize:backdrop, .default-decoration .fullscreen headerbar windowcontrols > button.maximize:backdrop, .maximized .default-decoration headerbar windowcontrols > button.maximize:backdrop, .default-decoration .maximized headerbar windowcontrols > button.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-smaller.png"), url("assets/titlebutton-restore-backdrop-smaller@2.png"));
+}
+
+.fullscreen .default-decoration headerbar windowcontrols > button.maximize:hover, .default-decoration .fullscreen headerbar windowcontrols > button.maximize:hover, .maximized .default-decoration headerbar windowcontrols > button.maximize:hover, .default-decoration .maximized headerbar windowcontrols > button.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-smaller.png"), url("assets/titlebutton-restore-hover-smaller@2.png"));
+}
+
+.fullscreen .default-decoration headerbar windowcontrols > button.maximize:active, .default-decoration .fullscreen headerbar windowcontrols > button.maximize:active, .maximized .default-decoration headerbar windowcontrols > button.maximize:active, .default-decoration .maximized headerbar windowcontrols > button.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-smaller.png"), url("assets/titlebutton-restore-active-smaller@2.png"));
+}
+
+headerbar > windowhandle > box > box.end > windowcontrols {
+  margin-right: -10px;
+}
+
 headerbar windowcontrols > button, .csd headerbar windowcontrols > button, .solid-csd headerbar windowcontrols > button {
   margin: 0;
   padding: 0;
@@ -5033,26 +5106,26 @@ headerbar windowcontrols > button, .csd headerbar windowcontrols > button, .soli
   border-color: transparent;
   background-color: transparent;
   background-image: none;
-  background-color: rgba(40, 42, 51, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 headerbar windowcontrols > button:hover {
-  color: rgba(228, 235, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #333641;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #f2f2f2;
 }
 
 headerbar windowcontrols > button:active, headerbar windowcontrols > button:checked {
   color: #ffffff;
-  border-color: #68a2e6;
+  border-color: #2679db;
   background-color: #5294e2;
 }
 
 headerbar windowcontrols > button.close, headerbar windowcontrols > button.maximize, headerbar windowcontrols > button.minimize {
   padding: 0;
-  margin: 0 2px;
-  min-width: 27px;
-  min-height: 27px;
+  margin: 0 0;
+  min-width: 38px;
+  min-height: 38px;
   color: transparent;
   background-color: transparent;
   background-position: center;
@@ -5066,83 +5139,83 @@ headerbar windowcontrols > button.close:backdrop, headerbar windowcontrols > but
 }
 
 headerbar windowcontrols > button.close {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-win.png"), url("assets/titlebutton-close-win@2.png"));
 }
 
 headerbar windowcontrols > button.close:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-win.png"), url("assets/titlebutton-close-backdrop-win@2.png"));
 }
 
 headerbar windowcontrols > button.close:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-win.png"), url("assets/titlebutton-close-hover-win@2.png"));
 }
 
 headerbar windowcontrols > button.close:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark.png"), url("assets/titlebutton-close-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active-win.png"), url("assets/titlebutton-close-active-win@2.png"));
 }
 
 headerbar windowcontrols > button.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark.png"), url("assets/titlebutton-maximize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-win.png"), url("assets/titlebutton-maximize-win@2.png"));
 }
 
 headerbar windowcontrols > button.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-win.png"), url("assets/titlebutton-maximize-backdrop-win@2.png"));
 }
 
 headerbar windowcontrols > button.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-win.png"), url("assets/titlebutton-maximize-hover-win@2.png"));
 }
 
 headerbar windowcontrols > button.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark.png"), url("assets/titlebutton-maximize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-win.png"), url("assets/titlebutton-maximize-active-win@2.png"));
 }
 
 headerbar windowcontrols > button.minimize {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark.png"), url("assets/titlebutton-minimize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-win.png"), url("assets/titlebutton-minimize-win@2.png"));
 }
 
 headerbar windowcontrols > button.minimize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark.png"), url("assets/titlebutton-minimize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-win.png"), url("assets/titlebutton-minimize-backdrop-win@2.png"));
 }
 
 headerbar windowcontrols > button.minimize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark.png"), url("assets/titlebutton-minimize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-win.png"), url("assets/titlebutton-minimize-hover-win@2.png"));
 }
 
 headerbar windowcontrols > button.minimize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-win.png"), url("assets/titlebutton-minimize-active-win@2.png"));
 }
 
 headerbar windowcontrols > button.restore {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-win.png"), url("assets/titlebutton-restore-win@2.png"));
 }
 
 headerbar windowcontrols > button.restore:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-win.png"), url("assets/titlebutton-restore-backdrop-win@2.png"));
 }
 
 headerbar windowcontrols > button.restore:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-win.png"), url("assets/titlebutton-restore-hover-win@2.png"));
 }
 
 headerbar windowcontrols > button.restore:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-win.png"), url("assets/titlebutton-restore-active-win@2.png"));
 }
 
 .fullscreen headerbar windowcontrols > button.maximize, .maximized headerbar windowcontrols > button.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-win.png"), url("assets/titlebutton-restore-win@2.png"));
 }
 
 .fullscreen headerbar windowcontrols > button.maximize:backdrop, .maximized headerbar windowcontrols > button.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-win.png"), url("assets/titlebutton-restore-backdrop-win@2.png"));
 }
 
 .fullscreen headerbar windowcontrols > button.maximize:hover, .maximized headerbar windowcontrols > button.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-win.png"), url("assets/titlebutton-restore-hover-win@2.png"));
 }
 
 .fullscreen headerbar windowcontrols > button.maximize:active, .maximized headerbar windowcontrols > button.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-win.png"), url("assets/titlebutton-restore-active-win@2.png"));
 }
 
 .nemo-window .sidebar .view.cell:selected, .nemo-window .sidebar row.cell:selected, leaflet > scrolledwindow > viewport.frame > list > row.activatable:selected, hdyleaflet > box.vertical > scrolledwindow > viewport .sidebar list > row.activatable:selected, hdyleaflet > stack > frame > grid.vertical > scrolledwindow > viewport.frame > list.contacts-contact-list row.activatable.contact-data-row:selected,
@@ -5277,30 +5350,30 @@ window.background > box.vertical > box.horizontal > stack > widget > notebook.fr
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .path-bar button.flat.text-button.toggle:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(42, 44, 60, 0.8);
   background: none;
   box-shadow: inset 0 -1px rgba(82, 148, 226, 0.5), 0 1px rgba(82, 148, 226, 0.5);
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .path-bar button.flat.text-button.toggle:checked, .nautilus-window headerbar.titlebar .path-bar-box .path-bar button.flat.text-button.toggle:active {
-  color: rgba(228, 235, 241, 0.8);
+  color: rgba(62, 67, 91, 0.8);
   background: none;
   box-shadow: inset 0 -1px #5294e2, 0 1px #5294e2;
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .path-bar button.flat.text-button.toggle:disabled {
-  color: rgba(228, 235, 241, 0.4);
+  color: rgba(62, 67, 91, 0.4);
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box .path-bar button.flat.text-button.toggle:checked:disabled {
-  color: rgba(228, 235, 241, 0.4);
+  color: rgba(62, 67, 91, 0.4);
   box-shadow: inset 0 -1px rgba(82, 148, 226, 0.4), 0 1px rgba(82, 148, 226, 0.4);
 }
 
 .nautilus-window headerbar.titlebar .path-bar-box {
   margin-top: 5px;
   margin-bottom: 5px;
-  color: rgba(228, 235, 241, 0.8);
+  color: rgba(62, 67, 91, 0.8);
   background-color: transparent;
   border: none;
 }
@@ -5338,8 +5411,8 @@ window.background > box.vertical > box.horizontal > stack > widget > notebook.fr
 
 .nautilus-window headerbar.titlebar .path-bar-box.width-maximized {
   border: none;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-  background-color: rgba(228, 235, 241, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+  background-color: rgba(62, 67, 91, 0.06);
   border-radius: 3px;
   padding: 0 6px;
 }
@@ -5427,13 +5500,13 @@ window.background > box.vertical > box.horizontal > stack > widget > notebook.fr
 
 @keyframes needs_attention_keyframes {
   0% {
-    color: rgba(228, 235, 241, 0.8);
-    border-color: rgba(255, 255, 255, 0.12);
-    background-color: #333641;
+    color: rgba(62, 67, 91, 0.8);
+    border-color: rgba(0, 0, 0, 0.12);
+    background-color: #f2f2f2;
   }
   100% {
     color: #ffffff;
-    border-color: #68a2e6;
+    border-color: #2679db;
     background-color: #5294e2;
   }
 }
@@ -6079,9 +6152,9 @@ window.background > box.vertical box.horizontal > box.vertical > scrolledwindow 
 }
 
 headerbar.titlebar.incognito-mode entry {
-  color: rgba(228, 235, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #21232a;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #f7f7f7;
 }
 
 headerbar.titlebar.incognito-mode entry image, headerbar.titlebar.incognito-mode entry image:hover {
@@ -6089,15 +6162,15 @@ headerbar.titlebar.incognito-mode entry image, headerbar.titlebar.incognito-mode
 }
 
 headerbar.titlebar.incognito-mode entry:focus {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(104, 111, 151, 0.8);
   border-color: #5294e2;
-  background-color: #262830;
+  background-color: #fcfcfc;
 }
 
 headerbar.titlebar.incognito-mode entry:disabled {
-  color: rgba(228, 235, 241, 0.35);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: rgba(33, 35, 42, 0.85);
+  color: rgba(62, 67, 91, 0.35);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(247, 247, 247, 0.85);
 }
 
 notebook > box > stack > box.vertical > paned.vertical > overlay > .floating-bar {
@@ -6105,9 +6178,9 @@ notebook > box > stack > box.vertical > paned.vertical > overlay > .floating-bar
 }
 
 .background headerbar entry.starred, .background headerbar entry.non-starred {
-  color: rgba(228, 235, 241, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #21232a;
+  color: rgba(62, 67, 91, 0.8);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: #f7f7f7;
 }
 
 .background headerbar entry.starred image, .background headerbar entry.starred image:hover, .background headerbar entry.non-starred image, .background headerbar entry.non-starred image:hover {
@@ -6115,15 +6188,15 @@ notebook > box > stack > box.vertical > paned.vertical > overlay > .floating-bar
 }
 
 .background headerbar entry.starred:focus, .background headerbar entry.non-starred:focus {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(104, 111, 151, 0.8);
   border-color: #5294e2;
-  background-color: #262830;
+  background-color: #fcfcfc;
 }
 
 .background headerbar entry.starred:disabled, .background headerbar entry.non-starred:disabled {
-  color: rgba(228, 235, 241, 0.35);
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: rgba(33, 35, 42, 0.85);
+  color: rgba(62, 67, 91, 0.35);
+  border-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(247, 247, 247, 0.85);
 }
 
 .background headerbar entry.starred > image.right {
@@ -6552,112 +6625,112 @@ window.background.csd > leaflet > box.vertical > searchbar entry image:disabled,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close, .geary-titlebar-left button.titlebutton.close, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-dark-win.png"), url("assets/titlebutton-close-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.close:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.close:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.close:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close:backdrop, .geary-titlebar-left button.titlebutton.close:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark-win.png"), url("assets/titlebutton-close-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.close:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.close:hover, hdyleaflet > headerbar:first-child button.titlebutton.close:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close:hover, .geary-titlebar-left button.titlebutton.close:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark-win.png"), url("assets/titlebutton-close-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.close:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.close:active, hdyleaflet > headerbar:first-child button.titlebutton.close:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.close:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.close:active, .geary-titlebar-left button.titlebutton.close:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.close:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.close:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.close:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.close:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.close:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.close:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark.png"), url("assets/titlebutton-close-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark-win.png"), url("assets/titlebutton-close-active-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize, hdyleaflet > headerbar:first-child button.titlebutton.maximize,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize, .geary-titlebar-left button.titlebutton.maximize, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark.png"), url("assets/titlebutton-maximize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark-win.png"), url("assets/titlebutton-maximize-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.maximize:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize:backdrop, .geary-titlebar-left button.titlebutton.maximize:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark-win.png"), url("assets/titlebutton-maximize-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:hover, hdyleaflet > headerbar:first-child button.titlebutton.maximize:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize:hover, .geary-titlebar-left button.titlebutton.maximize:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark-win.png"), url("assets/titlebutton-maximize-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.maximize:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:active, hdyleaflet > headerbar:first-child button.titlebutton.maximize:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.maximize:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.maximize:active, .geary-titlebar-left button.titlebutton.maximize:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.maximize:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.maximize:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.maximize:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.maximize:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.maximize:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark.png"), url("assets/titlebutton-maximize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark-win.png"), url("assets/titlebutton-maximize-active-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize, hdyleaflet > headerbar:first-child button.titlebutton.minimize,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize, .geary-titlebar-left button.titlebutton.minimize, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark.png"), url("assets/titlebutton-minimize-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark-win.png"), url("assets/titlebutton-minimize-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.minimize:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize:backdrop, .geary-titlebar-left button.titlebutton.minimize:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark.png"), url("assets/titlebutton-minimize-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark-win.png"), url("assets/titlebutton-minimize-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize:hover, hdyleaflet > headerbar:first-child button.titlebutton.minimize:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize:hover, .geary-titlebar-left button.titlebutton.minimize:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark.png"), url("assets/titlebutton-minimize-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark-win.png"), url("assets/titlebutton-minimize-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.minimize:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.minimize:active, hdyleaflet > headerbar:first-child button.titlebutton.minimize:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.minimize:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.minimize:active, .geary-titlebar-left button.titlebutton.minimize:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.minimize:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.minimize:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.minimize:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.minimize:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.minimize:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.minimize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark-win.png"), url("assets/titlebutton-minimize-active-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore, hdyleaflet > headerbar:first-child button.titlebutton.restore,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore, .geary-titlebar-left button.titlebutton.restore, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-win.png"), url("assets/titlebutton-restore-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore:backdrop, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore:backdrop, hdyleaflet > headerbar:first-child button.titlebutton.restore:backdrop,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore:backdrop, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore:backdrop, .geary-titlebar-left button.titlebutton.restore:backdrop, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore:backdrop,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore:backdrop,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore:backdrop, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore:backdrop, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore:backdrop, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-win.png"), url("assets/titlebutton-restore-backdrop-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore:hover, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore:hover, hdyleaflet > headerbar:first-child button.titlebutton.restore:hover,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore:hover, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore:hover, .geary-titlebar-left button.titlebutton.restore:hover, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore:hover,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore:hover,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore:hover, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore:hover, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore:hover, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-win.png"), url("assets/titlebutton-restore-hover-dark-win@2.png"));
 }
 
 .selection-mode hdyleaflet headerbar button.titlebutton.restore:active, .selection-mode leaflet.unfolded headerbar button.titlebutton.restore:active, hdyleaflet > headerbar:first-child button.titlebutton.restore:active,
 leaflet.unfolded > headerbar:first-child button.titlebutton.restore:active, .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) button.titlebutton.restore:active, .geary-titlebar-left button.titlebutton.restore:active, window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child button.titlebutton.restore:active,
 window.background.csd > headerbar.titlebar > hdyleaflet > headerbar:first-child button.titlebutton.restore:active,
 window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child button.titlebutton.restore:active, window.background.csd > box.titlebar.horizontal > headerbar:first-child button.titlebutton.restore:active, .titlebar > headerbar.titlebar.tweak-titlebar-left button.titlebutton.restore:active, window.org-gnome-gedit .titlebar > headerbar:first-child button.titlebutton.restore:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-win.png"), url("assets/titlebutton-restore-active-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize,
@@ -6671,7 +6744,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark.png"), url("assets/titlebutton-restore-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-dark-win.png"), url("assets/titlebutton-restore-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize:backdrop, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize:backdrop, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:backdrop, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:backdrop, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop,
@@ -6685,7 +6758,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:backdrop, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark.png"), url("assets/titlebutton-restore-backdrop-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop-dark-win.png"), url("assets/titlebutton-restore-backdrop-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize:hover, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize:hover, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:hover, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:hover, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover,
@@ -6699,7 +6772,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize:hover, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:hover, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark.png"), url("assets/titlebutton-restore-hover-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover-dark-win.png"), url("assets/titlebutton-restore-hover-dark-win@2.png"));
 }
 
 .fullscreen .selection-mode hdyleaflet headerbar button.titlebutton.maximize:active, .maximized .selection-mode hdyleaflet headerbar button.titlebutton.maximize:active, .fullscreen .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:active, .maximized .selection-mode leaflet.unfolded headerbar button.titlebutton.maximize:active, window#GearyMainWindow.fullscreen .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:active,
@@ -6713,7 +6786,7 @@ window.maximized.org-gnome-gedit > .titlebar > headerbar:first-child > box.left.
 .fullscreen window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .fullscreen window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .fullscreen .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:active, .fullscreen window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, window.org-gnome-gedit .fullscreen .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized hdyleaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active,
 .maximized leaflet.unfolded > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized .geary-main-window > headerbar > leaflet > leaflet > headerbar:not(:last-child) > box.left.horizontal button.titlebutton.maximize:active, .maximized .geary-titlebar-left > box.left.horizontal button.titlebutton.maximize:active, .maximized window.background.csd > headerbar.titlebar > box.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active,
 .maximized window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized window.background.csd > box.titlebar.horizontal > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, .maximized .titlebar > headerbar.titlebar.tweak-titlebar-left > box.left.horizontal button.titlebutton.maximize:active, .maximized window.org-gnome-gedit .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active, window.org-gnome-gedit .maximized .titlebar > headerbar:first-child > box.left.horizontal button.titlebutton.maximize:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark.png"), url("assets/titlebutton-restore-active-dark@2.png"));
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active-dark-win.png"), url("assets/titlebutton-restore-active-dark-win@2.png"));
 }
 
 hdyleaflet > headerbar:first-child,
@@ -6799,16 +6872,16 @@ window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child but
 }
 
 .nemo-window .sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider, .nautilus-window placessidebar.sidebar scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
-  background-color: white;
+  background-color: #7c8088;
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .nemo-window .sidebar scrollbar slider, .nautilus-window placessidebar.sidebar scrollbar slider {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(124, 128, 136, 0.7);
 }
 
 .nemo-window .sidebar scrollbar slider:hover, .nautilus-window placessidebar.sidebar scrollbar slider:hover {
-  background-color: white;
+  background-color: #898d94;
 }
 
 .nemo-window .sidebar scrollbar slider:hover:active, .nautilus-window placessidebar.sidebar scrollbar slider:hover:active {
@@ -6820,7 +6893,7 @@ window.background.csd > headerbar.titlebar > leaflet > headerbar:first-child but
 }
 
 .nemo-window .sidebar scrollbar trough, .nautilus-window placessidebar.sidebar scrollbar trough {
-  background-color: #1c1d23;
+  background-color: #e4edf3;
 }
 
 .nautilus-window headerbar {
@@ -6835,7 +6908,7 @@ filechooser paned > separator {
 }
 
 .nautilus-window paned > separator {
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #d3e1eb, #d3e1eb);
 }
 
 .nautilus-window headerbar {
@@ -6848,12 +6921,12 @@ filechooser paned > separator {
 
 .nautilus-window placessidebar.sidebar {
   box-shadow: inset 38px 0 0 0 #32343D;
-  background-color: #272931;
+  background-color: #f6f9fb;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row {
   transition: none;
-  color: #d8dedf;
+  color: #575a60;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row .sidebar-icon {
@@ -6870,12 +6943,12 @@ filechooser paned > separator {
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row.has-open-popup, .nautilus-window placessidebar.sidebar row.sidebar-row:hover {
-  background-color: rgba(216, 222, 223, 0.05);
+  background-color: rgba(87, 90, 96, 0.05);
   box-shadow: inset -2px 0 #7eafe9, inset 38px 0 0 0 #32343D;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:disabled, .nautilus-window placessidebar.sidebar row.sidebar-row:disabled label, .nautilus-window placessidebar.sidebar row.sidebar-row:disabled image {
-  color: rgba(216, 222, 223, 0.4);
+  color: rgba(87, 90, 96, 0.4);
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:active {
@@ -6891,11 +6964,11 @@ filechooser paned > separator {
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row.has-open-popup:selected .sidebar-label, .nautilus-window placessidebar.sidebar row.sidebar-row:selected .sidebar-label, .nautilus-window placessidebar.sidebar row.sidebar-row:selected:hover .sidebar-label, .nautilus-window placessidebar.sidebar row.sidebar-row:active:hover .sidebar-label {
-  color: #bcc6c8;
+  color: #3f4145;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row:selected:hover, .nautilus-window placessidebar.sidebar row.sidebar-row:active:hover {
-  background-color: rgba(216, 222, 223, 0.05);
+  background-color: rgba(87, 90, 96, 0.05);
   box-shadow: inset -2px 0 #7eafe9, inset 38px 0 0 0 #5294e2;
   background-image: -gtk-scaled(url("assets/selected-dot.png"), url("assets/selected-dot@2.png"));
   background-repeat: no-repeat;
@@ -6903,7 +6976,7 @@ filechooser paned > separator {
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row button.sidebar-button {
-  color: #d8dedf;
+  color: #575a60;
 }
 
 .nautilus-window placessidebar.sidebar row.sidebar-row button.sidebar-button:hover {
@@ -6947,13 +7020,13 @@ filechooser paned > separator {
 }
 
 .nemo-window .sidebar {
-  color: #d8dedf;
-  background-color: #272931;
+  color: #575a60;
+  background-color: #f6f9fb;
 }
 
 .nemo-window .sidebar .view, .nemo-window .sidebar row {
   background-color: transparent;
-  color: #d8dedf;
+  color: #575a60;
 }
 
 .nemo-window .sidebar .view.cell.has-open-popup:selected, .nemo-window .sidebar .view.cell:selected:hover, .nemo-window .sidebar row.cell.has-open-popup:selected, .nemo-window .sidebar row.cell:selected:hover {
@@ -6962,16 +7035,16 @@ filechooser paned > separator {
 }
 
 .nemo-window .sidebar .view.has-open-popup, .nemo-window .sidebar .view:hover, .nemo-window .sidebar row.has-open-popup, .nemo-window .sidebar row:hover {
-  color: #d8dedf;
-  background-color: #393b42;
+  color: #575a60;
+  background-color: #e6e9ec;
 }
 
 .nemo-window .sidebar .view.expander, .nemo-window .sidebar row.expander {
-  color: #808488;
+  color: #a7aaae;
 }
 
 .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar row.expander:hover {
-  color: #d8dedf;
+  color: #575a60;
 }
 
 .nemo-window .sidebar separator {
@@ -7091,7 +7164,7 @@ list.gedit-document-panel row:hover:not(:selected) button:active, list.gedit-doc
 }
 
 .gedit-side-panel-paned > separator {
-  background-image: linear-gradient(to bottom, #101115, #101115);
+  background-image: linear-gradient(to bottom, #d3e1eb, #d3e1eb);
 }
 
 .gedit-bottom-panel-paned > separator {
@@ -7263,12 +7336,12 @@ window.background.csd > leaflet > separator.sidebar {
 window#GearyMainWindow .titlebar,
 window.geary-main-window .titlebar {
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.15);
-  background-color: #282A33;
+  background-color: #ffffff;
 }
 
 window#GearyMainWindow .titlebar:backdrop,
 window.geary-main-window .titlebar:backdrop {
-  background-color: #2b2e37;
+  background-color: white;
 }
 
 window#GearyMainWindow .titlebar headerbar.geary-titlebar > separator,
@@ -7506,23 +7579,23 @@ leaflet > scrolledwindow > viewport.frame > list > row.activatable .seahorse-sid
 @define-color content_view_bg #ffffff;
 /* Very contrasty background for text views (@theme_text_color foreground) */
 @define-color text_view_bg #ffffff;
-@define-color wm_title alpha(#e4ebf1, 0.8);
-@define-color wm_unfocused_title alpha(#e4ebf1, 0.5);
-@define-color wm_bg #282a33;
-@define-color wm_bg_unfocused #2b2e37;
-@define-color wm_highlight #2f313c;
+@define-color wm_title alpha(#3e435b, 0.8);
+@define-color wm_unfocused_title alpha(#3e435b, 0.5);
+@define-color wm_bg white;
+@define-color wm_bg_unfocused white;
+@define-color wm_highlight white;
 @define-color wm_shadow alpha(black, 0.35);
 @define-color wm_border #a6a6a6;
-@define-color wm_button_close_bg #cc575d;
-@define-color wm_button_close_hover_bg #d7787d;
-@define-color wm_button_close_active_bg #be3841;
-@define-color wm_icon_close_bg #2f343f;
-@define-color wm_button_hover_bg #454C5C;
+@define-color wm_button_close_bg #f46067;
+@define-color wm_button_close_hover_bg #f68086;
+@define-color wm_button_close_active_bg #f13039;
+@define-color wm_icon_close_bg #F8F8F9;
+@define-color wm_button_hover_bg #fdfdfd;
 @define-color wm_button_active_bg #5294e2;
-@define-color wm_button_hover_border #262932;
-@define-color wm_icon_bg #90939B;
-@define-color wm_icon_unfocused_bg #666A74;
-@define-color wm_icon_hover_bg #C4C7CC;
+@define-color wm_button_hover_border #D1D3DA;
+@define-color wm_icon_bg #90949E;
+@define-color wm_icon_unfocused_bg #B6B8C0;
+@define-color wm_icon_hover_bg #7A7F8B;
 @define-color wm_icon_active_bg #ffffff;
 @define-color budgie_tasklist_indicator_color #5294e2;
 @define-color budgie_tasklist_indicator_color_active #5294e2;
