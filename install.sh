@@ -14,6 +14,7 @@ SRC_DIR=$(cd $(dirname $0) && pwd)
 
 THEME_NAME=Qogir
 COLOR_VARIANTS=('' '-Light' '-Dark')
+WIN_VARIANTS=('' '-win')
 ICON_NAME=''
 
 image=''
@@ -78,11 +79,12 @@ install() {
   local theme=${3}
   local color=${4}
   local icon=${5}
+  local win=${6}
 
   [[ ${color} == '-Dark' ]] && local ELSE_DARK=${color}
   [[ ${color} == '-Light' ]] && local ELSE_LIGHT=${color}
 
-  local THEME_DIR=${dest}/${name}${theme}${color}
+  local THEME_DIR=${dest}/${name}${theme}${win}${color}
 
   [[ -d ${THEME_DIR} ]] && rm -rf ${THEME_DIR}
 
@@ -96,13 +98,13 @@ install() {
 
   echo "[Desktop Entry]"                                                          >> ${THEME_DIR}/index.theme
   echo "Type=X-GNOME-Metatheme"                                                   >> ${THEME_DIR}/index.theme
-  echo "Name=${name}${theme}${color}"                                             >> ${THEME_DIR}/index.theme
+  echo "Name=${name}${theme}${win}${color}"                                       >> ${THEME_DIR}/index.theme
   echo "Comment=An Clean Gtk+ theme based on Flat Design"                         >> ${THEME_DIR}/index.theme
   echo "Encoding=UTF-8"                                                           >> ${THEME_DIR}/index.theme
   echo ""                                                                         >> ${THEME_DIR}/index.theme
   echo "[X-GNOME-Metatheme]"                                                      >> ${THEME_DIR}/index.theme
-  echo "GtkTheme=${name}${theme}${color}"                                         >> ${THEME_DIR}/index.theme
-  echo "MetacityTheme=${name}${theme}${color}"                                    >> ${THEME_DIR}/index.theme
+  echo "GtkTheme=${name}${theme}${win}${color}"                                   >> ${THEME_DIR}/index.theme
+  echo "MetacityTheme=${name}${theme}${win}${color}"                              >> ${THEME_DIR}/index.theme
   echo "IconTheme=${name}${theme,,}${ELSE_DARK,,}"                                >> ${THEME_DIR}/index.theme
   echo "CursorTheme=Adwaita"                                                      >> ${THEME_DIR}/index.theme
   echo "ButtonLayout=menu:minimize,maximize,close"                                >> ${THEME_DIR}/index.theme
@@ -130,11 +132,11 @@ install() {
   cp -r ${SRC_DIR}/src/gtk/assets/assets-common/*                                    ${THEME_DIR}/gtk-3.0/assets
 
   if [[ "$tweaks" == 'true' ]]; then
-    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-3.0/gtk${color}.scss                   ${THEME_DIR}/gtk-3.0/gtk.css
-    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-3.0/gtk-Dark.scss                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
+    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-3.0/gtk${win}${color}.scss                   ${THEME_DIR}/gtk-3.0/gtk.css
+    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-3.0/gtk${win}-Dark.scss                      ${THEME_DIR}/gtk-3.0/gtk-dark.css
   else
-    cp -r ${SRC_DIR}/src/gtk/theme-3.0/gtk${color}.css                               ${THEME_DIR}/gtk-3.0/gtk.css
-    cp -r ${SRC_DIR}/src/gtk/theme-3.0/gtk-Dark.css                                  ${THEME_DIR}/gtk-3.0/gtk-dark.css
+    cp -r ${SRC_DIR}/src/gtk/theme-3.0/gtk${win}${color}.css                               ${THEME_DIR}/gtk-3.0/gtk.css
+    cp -r ${SRC_DIR}/src/gtk/theme-3.0/gtk${win}-Dark.css                                  ${THEME_DIR}/gtk-3.0/gtk-dark.css
   fi
 
   cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-3.0/thumbnail.png
@@ -155,11 +157,11 @@ install() {
   cp -r ${SRC_DIR}/src/gtk/assets/assets-common/*                                    ${THEME_DIR}/gtk-4.0/assets
 
   if [[ "$tweaks" == 'true' ]]; then
-    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-4.0/gtk${color}.scss                   ${THEME_DIR}/gtk-4.0/gtk.css
-    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-4.0/gtk-Dark.scss                      ${THEME_DIR}/gtk-4.0/gtk-dark.css
+    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-4.0/gtk${win}${color}.scss                   ${THEME_DIR}/gtk-4.0/gtk.css
+    sassc $SASSC_OPT ${SRC_DIR}/src/gtk/theme-4.0/gtk${win}-Dark.scss                      ${THEME_DIR}/gtk-4.0/gtk-dark.css
   else
-    cp -r ${SRC_DIR}/src/gtk/theme-4.0/gtk${color}.css                               ${THEME_DIR}/gtk-4.0/gtk.css
-    cp -r ${SRC_DIR}/src/gtk/theme-4.0/gtk-Dark.css                                  ${THEME_DIR}/gtk-4.0/gtk-dark.css
+    cp -r ${SRC_DIR}/src/gtk/theme-4.0/gtk${win}${color}.css                               ${THEME_DIR}/gtk-4.0/gtk.css
+    cp -r ${SRC_DIR}/src/gtk/theme-4.0/gtk${win}-Dark.css                                  ${THEME_DIR}/gtk-4.0/gtk-dark.css
   fi
 
   cp -r ${SRC_DIR}/src/gtk/assets/thumbnail${theme}${ELSE_DARK}.png                  ${THEME_DIR}/gtk-4.0/thumbnail.png
@@ -167,7 +169,7 @@ install() {
   # GNOME SHELL
   mkdir -p                                                                           ${THEME_DIR}/gnome-shell
   cp -r ${SRC_DIR}/src/gnome-shell/common-assets                                     ${THEME_DIR}/gnome-shell/assets
-  cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/{background.jpg,calendar-today.svg} ${THEME_DIR}/gnome-shell/assets
+  # cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/{background.jpg,calendar-today.svg} ${THEME_DIR}/gnome-shell/assets
   cp -r ${SRC_DIR}/src/gnome-shell/assets${theme}/assets${ELSE_DARK}/*.svg           ${THEME_DIR}/gnome-shell/assets
 
   if [[ -f ${SRC_DIR}/src/gnome-shell/logos/logo-${icon}.svg ]] ; then
@@ -207,21 +209,10 @@ install() {
   # METACITY
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
 
-  if [[ "$window" == 'round' ]]; then
-    cp -r ${SRC_DIR}/src/metacity-1/assets-Round                                     ${THEME_DIR}/metacity-1/assets
-    cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-3-Round.xml                       ${THEME_DIR}/metacity-1/metacity-theme-3.xml
-    cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_LIGHT}-Round.xml          ${THEME_DIR}/metacity-1/metacity-theme-1.xml
-  else
-    if [[ "$square" == 'true' ]]; then
-      cp -r ${SRC_DIR}/src/metacity-1/assets${ELSE_LIGHT}-Win/*.png                  ${THEME_DIR}/metacity-1
-      cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-3-Win.xml                       ${THEME_DIR}/metacity-1/metacity-theme-3.xml
-      cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_LIGHT}-Win.xml          ${THEME_DIR}/metacity-1/metacity-theme-1.xml
-    else
-      cp -r ${SRC_DIR}/src/metacity-1/assets${ELSE_LIGHT}/*.png                      ${THEME_DIR}/metacity-1
-      cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-3.xml                           ${THEME_DIR}/metacity-1/metacity-theme-3.xml
-      cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_LIGHT}.xml              ${THEME_DIR}/metacity-1/metacity-theme-1.xml
-    fi
-  fi
+  cp -r ${SRC_DIR}/src/metacity-1/assets${ELSE_LIGHT}-Win/*.png                  ${THEME_DIR}/metacity-1
+  cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-3-Win.xml                       ${THEME_DIR}/metacity-1/metacity-theme-3.xml
+  cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_LIGHT}-Win.xml          ${THEME_DIR}/metacity-1/metacity-theme-1.xml
+
 
   cp -r ${SRC_DIR}/src/metacity-1/thumbnail${ELSE_LIGHT}.png                         ${THEME_DIR}/metacity-1/thumbnail.png
   cd ${THEME_DIR}/metacity-1
@@ -238,6 +229,7 @@ install_xfwm() {
   local name=${2}
   local color=${3}
   local screen=${4}
+  local win=${5}
 
   [[ ${color} == '-Dark' ]] && local ELSE_DARK=${color}
   [[ ${color} == '-Light' ]] && local ELSE_LIGHT=${color}
