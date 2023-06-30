@@ -356,10 +356,6 @@ while [[ $# -gt 0 ]]; do
             Wins+=("${Win_VARIANTS[0]}")
             shift 1
             ;;
-          square)
-            Wins+=("${Win_VARIANTS[1]}")
-            shift 1
-            ;;
           -*|--*)
             break
             ;;
@@ -377,14 +373,6 @@ while [[ $# -gt 0 ]]; do
         case "${theme}" in
           standard)
             themes+=("${THEME_VARIANTS[0]}")
-            shift 1
-            ;;
-          manjaro)
-            themes+=("${THEME_VARIANTS[1]}")
-            shift 1
-            ;;
-          ubuntu)
-            themes+=("${THEME_VARIANTS[2]}")
             shift 1
             ;;
           -*|--*)
@@ -406,11 +394,11 @@ while [[ $# -gt 0 ]]; do
             colors+=("${COLOR_VARIANTS[0]}")
             shift 1
             ;;
-          light)
+          Light)
             colors+=("${COLOR_VARIANTS[1]}")
             shift 1
             ;;
-          dark)
+          Dark)
             colors+=("${COLOR_VARIANTS[2]}")
             shift 1
             ;;
