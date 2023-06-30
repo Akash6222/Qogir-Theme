@@ -25,7 +25,7 @@ usage() {
   printf "  %-25s%s\n" "-l, --logo VARIANTS" "Specify nautilus logo [arch|budgie|debian|fedora|gnome|gentoo|manjaro|ubuntu] (Default: qogir icon)"
   printf "  %-25s%s\n" "-w, --Win VARIANTS..." "Specify titlebutton variant(s) [standard|square] (Default: All variants)"
   printf "  %-25s%s\n" "-t, --theme VARIANTS..." "Specify theme primary color variant(s) [standard|manjaro|ubuntu] (Default: All variants)"
-  printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|light|Dark] (Default: All variants)"
+  printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|Light|Dark] (Default: All variants)"
   printf "  %-25s%s\n" "-i, --image VARIANTS..." "Install theme with nautilus background image"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme, this option need root user authority! please run this with sudo"
   printf "  %-25s%s\n" "-r, --revert" "revert GDM theme, this option need root user authority! please run this with sudo"
@@ -41,7 +41,7 @@ install() {
   local logo=${6}
 
   [[ ${color} == '-Dark' ]] && local ELSE_Dark=${color}
-  [[ ${color} == '-Light' ]] && local ELSE_LIGHT=${color}
+  [[ ${color} == '-Light' ]] && local ELSE_Light=${color}
 
   local THEME_DIR=${dest}/${name}${theme}${Win}${color}
 
@@ -142,16 +142,16 @@ install() {
   cp -r ${SRC_DIR}/src/cinnamon/thumbnail${theme}${ELSE_Dark}.png                    ${THEME_DIR}/cinnamon/thumbnail.png
 
   mkdir -p                                                                           ${THEME_DIR}/metacity-1
-  cp -r ${SRC_DIR}/src/metacity-1/assets${ELSE_LIGHT}${Win}/*.png                    ${THEME_DIR}/metacity-1
+  cp -r ${SRC_DIR}/src/metacity-1/assets${ELSE_Light}${Win}/*.png                    ${THEME_DIR}/metacity-1
   cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-3${Win}.xml                         ${THEME_DIR}/metacity-1/metacity-theme-3.xml
-  cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_LIGHT}${Win}.xml            ${THEME_DIR}/metacity-1/metacity-theme-1.xml
-  cp -r ${SRC_DIR}/src/metacity-1/thumbnail${ELSE_LIGHT}.png                         ${THEME_DIR}/metacity-1/thumbnail.png
+  cp -r ${SRC_DIR}/src/metacity-1/metacity-theme-1${ELSE_Light}${Win}.xml            ${THEME_DIR}/metacity-1/metacity-theme-1.xml
+  cp -r ${SRC_DIR}/src/metacity-1/thumbnail${ELSE_Light}.png                         ${THEME_DIR}/metacity-1/thumbnail.png
   cd ${THEME_DIR}/metacity-1
   ln -s metacity-theme-1.xml metacity-theme-2.xml
 
   mkdir -p                                                                           ${THEME_DIR}/xfwm4
-  cp -r ${SRC_DIR}/src/xfwm4/themerc${Win}${ELSE_LIGHT}                              ${THEME_DIR}/xfwm4/themerc
-  cp -r ${SRC_DIR}/src/xfwm4/assets${Win}${ELSE_LIGHT}/*.png                         ${THEME_DIR}/xfwm4
+  cp -r ${SRC_DIR}/src/xfwm4/themerc${Win}${ELSE_Light}                              ${THEME_DIR}/xfwm4/themerc
+  cp -r ${SRC_DIR}/src/xfwm4/assets${Win}${ELSE_Light}/*.png                         ${THEME_DIR}/xfwm4
 
   cp -r ${SRC_DIR}/src/plank                                                         ${THEME_DIR}
   cp -r ${SRC_DIR}/src/unity                                                         ${THEME_DIR}
@@ -406,7 +406,7 @@ while [[ $# -gt 0 ]]; do
             colors+=("${COLOR_VARIANTS[0]}")
             shift 1
             ;;
-          light)
+          Light)
             colors+=("${COLOR_VARIANTS[1]}")
             shift 1
             ;;
