@@ -106,8 +106,8 @@ $side_theme_alt_fg: $dark_sidebar_icon_fg;
   button.titlebutton {
     @each $k in ('close', 'maximize', 'minimize', 'restore') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
-        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}-dark#{$asset_suffix_win}.png'),
-                                                     url('assets/titlebutton-#{$k}#{$m}-dark#{$asset_suffix_win}@2.png'));
+        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}-dark.png'),
+                                                     url('assets/titlebutton-#{$k}#{$m}-dark@2.png'));
         }
       }
     }
@@ -117,8 +117,8 @@ $side_theme_alt_fg: $dark_sidebar_icon_fg;
 %side_max_titlebutton {
   button.titlebutton {
     @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
-      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-restore#{$m}-dark#{$asset_suffix_win}.png'),
-                                                      url('assets/titlebutton-restore#{$m}-dark#{$asset_suffix_win}@2.png'));
+      &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-restore#{$m}-dark.png'),
+                                                      url('assets/titlebutton-restore#{$m}-dark@2.png'));
       }
     }
   }
